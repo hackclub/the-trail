@@ -2,13 +2,55 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { Box, Text, Image, ThemeProvider, Grid } from 'theme-ui'
-import { useState, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Draggable from 'react-draggable';
+import axios from 'axios';
 
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [email, setEmail] = useState('');
+
+  const handleChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+  const sectionRef = useRef(null);
+
+  const scrollToOnboard = () => {
+    sectionRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
+
+  const calculateTimeLeft = () => {
+    const deadline = new Date('April 21, 2024 00:00:00').getTime();
+    const now = new Date().getTime();
+    const difference = deadline - now;
+
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  });
 
   const [openDropDowns, setOpenDropDowns] = useState([]);
 
@@ -44,6 +86,32 @@ export default function Home() {
     setIsHovered(false);
   };
 
+
+
+const BASE_ID = 'appagxgJZD9Ua8rxL';
+const TABLE_NAME = 'Trail';
+
+const createRecord = async (data) => {
+  try {
+    const response = await axios.post(
+      `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`,
+      { fields: data },
+      {
+        headers: {
+          Authorization: `Bearer ${process.env.AIRTABLE_PERSONAL_ACCESS_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    console.log('Record created:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Error creating record:', error);
+    throw error;
+  }
+};
+
+
   return (
     <>
       <Head>
@@ -52,8 +120,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <main style={{backgroundColor: "#FFF5D8", height: "500vh"}}>
+      <div style={{backgroundColor: "#032412", height: "100%"}}>
+      <main style={{backgroundColor: "#FFF5D8", height: "100%", display: "flex"}}>
+        
         
       <div style={{position: "absolute", zIndex: 5}}>
 
@@ -85,21 +154,21 @@ export default function Home() {
 
     <Text sx={{fontSize: [22, 24], lineHeight: [2, 1.5], marginTop:  24}}>
 
-    <i style={{fontSize: 42,letterSpacing: "1.5px", lineHeight: 1}} class="strange">Save the date:</i><br/>
+    <i style={{fontSize: 42,letterSpacing: "1.5px", lineHeight: 1}} className="strange">Save the date:</i><br/>
     Hack & Hike: July 12 - July 19
     </Text>
     </div>
     <div style={{display: "flex"}}>
     <div style={{marginTop: 16, alignItems: "center", display: "flex", justifyContent: "center"}}>
-    <button style={{position: "absolute", fontSize: 24, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "2px solid #FFF5D8", outline:"none", color:"#FFF5D8", padding: "16px 24px"}}>Hop Onboard</button>
+    <button onClick={scrollToOnboard} style={{cursor: "pointer", position: "absolute", fontSize: 24, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "2px solid #FFF5D8", outline:"none", color:"#FFF5D8", padding: "16px 24px"}}>Hop Onboard</button>
 
-    <button style={{fontSize: 24, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "4px solid #032412", outline:"none", color:"#FFF5D8", padding: "16px 24px"}}>Hop Onboard</button>
+    <button onClick={scrollToOnboard} style={{cursor: "pointer", fontSize: 24, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "4px solid #032412", outline:"none", color:"#FFF5D8", padding: "16px 24px"}}>Hop Onboard</button>
     </div>
     </div>
   </Box>
   <div style={{width: "100%", position:"relative", flexDirection: "column", height: "100%", display: "flex", justifyContent: "space-between"}}>
 
-  <Draggable style={{zIndex: 5, position: "absolute"}}>
+  <Draggable>
   <img style={{position: "absolute", 
   
   
@@ -190,8 +259,8 @@ export default function Home() {
           </Box>
 
           <Box style={{width: 970, backgroundColor: "#FFF5D8", border: "8px solid #032412"}}>
-          <h1 style={{margin: 0, letterSpacing: 1.06, color: "#032412", fontSize: 64, paddingLeft: 32, paddingTop: 32, paddingBottom: 32}}>
-          <i>Our Journey</i>
+          <h1 style={{margin: 0, width: "100%", textAlign: "center", letterSpacing: 1.06, color: "#032412", fontSize: 64, paddingLeft: 32, paddingTop: 32, paddingBottom: 32}}>
+          <i>Our journey...</i>
             </h1>
 
           <div style={{backgroundColor: "#032412", widht: "100%", height: "4px"}}>
@@ -229,19 +298,67 @@ export default function Home() {
           {openDropDowns.includes("weekOne") && (
           
           <div style={{display: "flex", flexDirection: "column"}}>
-            <p style={{fontSize:20}}>Sign up and then PR your piece of trail equipment idea to our <a style={{color: "#032412"}} href="https://github.com/hackclub/trail">Trail GitHub Repo</a>.</p>
-            <img style={{display: "flex", width: "100%"}} src="PickParts.svg"/>
+            <p style={{fontSize:20}}>
+
+            Join daily calls in <a style={{color: "#032412"}} href="https://hackclub.slack.com/archives/C06MPNYL0GH">#the-trail</a> channel (Hack Club Slack) and consult <a href="https://github.com/hackclub/trail/trail-book.md" style={{color: "#032412"}}>The Trail Book</a> to find the parts you need and wire up a schematic
+
+            </p>
+            <img style={{display: "flex", width: "100%"}} src="scaryConnections.svg"/>
           </div>)}
           </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderBottom: "4px solid #032412", borderRight: "2px solid #032412"}}>
-          <p>2. Wire Up PCB & Order</p>
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderBottom: "4px solid #032412", borderRight: "2px solid #032412"}}>
+          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
-          <p>3. Make A Case</p>
+          <div onClick={() => handleDrop("weekTwo")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
+          <p>2. Wire Up PCB & Order</p>
+          <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("weekTwo") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
+          </div>
+
+          {openDropDowns.includes("weekTwo") && (
+          
+          <div style={{display: "flex", flexDirection: "column"}}>
+            <p style={{fontSize:20}}>
+
+
+            Now time to resolve rat nests & order your board. This will be incredibly nerve-racking but you'll get a full design review and be able to confidently order the board and hope it will work. You'll also get the opportunity to add a wild silk screen.
+
+
+            </p>
+            <img style={{display: "flex", width: "100%"}} src="maggie.svg"/>
+          </div>)}
           </div>
           <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+
+          <div onClick={() => handleDrop("weekThree")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
+          <p>3. Make A Case</p>
+          <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("weekThree") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
+          </div>
+
+          {openDropDowns.includes("weekThree") && (
+          
+          <div style={{display: "flex", flexDirection: "column"}}>
+            <p style={{fontSize:20}}>
+
+            Now you can be creative and make some sort of case for your circuit to cover up that fiber glass. We recommend 3D printing a case, but you're also welcome to experiment with making a case out of metal or wood.
+
+            </p>
+            <img style={{display: "flex", width: "100%"}} src="metalGrinder.svg"/>
+          </div>)}
+          </div>
+          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "0px solid #032412"}}>
+
+          <div onClick={() => handleDrop("weekFour")} style={{cursor: "pointer", display: "flex", minHeight: 36, alignItems: 'center', justifyContent: "space-between"}}>
           <p>4. Assemble</p>
+          <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("weekFour") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
+          </div>
+
+          {openDropDowns.includes("weekFour") && (
+          
+          <div style={{display: "flex", flexDirection: "column"}}>
+            <p style={{fontSize:20}}>
+
+            Boom your pieces start to arrive in the mail and you assemble them.
+            </p>
+          </div>)}
           </div>
           
           </div>
@@ -290,14 +407,140 @@ export default function Home() {
         </div>
           </Box>
 
+
+          <Box ref={sectionRef} style={{width: 970, backgroundColor: "#FFF5D8", border: "8px solid #032412", padding: 32}}>
+          <h1 style={{margin: 0, letterSpacing: 1.06, color: "#032412", fontSize: 64}}>
+          <i>Join The Expedition</i>
+          </h1>
+
+          <p style={{fontSize: 24, marginTop: 24,}}>Embark on the greatest adventure of your life, make great friendships, and build a project that you didn’t think was possible.</p>
+
+          <div style={{marginTop: 24}}>
+            <input 
+            value={email}
+            onChange={handleChangeEmail}
+            id="placeholder" style={{fontFamily: "Fraunces", fontSize: 22, padding: 8, backgroundColor: "#FFF5D8", outline: "none", border: "4px solid #032412", color: "#032412"}} placeholder="Your email address"/>
+            <button 
+            onClick={() => createRecord({
+
+                    "Email": email
+                  
+            
+            })}
+            style={{cursor: "pointer", fontFamily: "Fraunces", cursor: "pointer", color: "#FFF5D8", fontSize: 22, padding: 8, backgroundColor: "#032412", border: "4px solid #032412"}}>Hop Onboard</button>
+            <p style={{fontSize: 24, marginTop: 16}}>
+              <b>
+      Deadline To Sign Up: {timeLeft.days} days {timeLeft.hours} hours {timeLeft.minutes} minutes {timeLeft.seconds} seconds
+   </b> </p>
+          </div>
+          
+          </Box>
+
+          <Box style={{width: 970, marginBottom: 24, backgroundColor: "#FFF5D8", border: "8px solid #032412", padding: 32}}>
+          <h1 style={{margin: 0, letterSpacing: 1.06, color: "#032412", fontSize: 64}}>
+          <i>Now to the questions...</i>
+          </h1>
+          <div style={{display: "flex"}}>
+            <div style={{width: "50%", flexDirection: "column", display:"flex"}}>
+            
+            <div>
+            <p onClick={() => handleDrop("Q1")} style={{cursor: "pointer", fontSize: 22}}>
+              
+              <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q1") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
+              What section of the Pacific Crest Trail are 
+  we traveling on?</p>
+
+            {openDropDowns.includes("Q1") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            
+            </div>
+            <div style={{marginTop: 24}}>
+            <p onClick={() => handleDrop("Q2")} style={{cursor: "pointer", fontSize: 22}}>
+              
+              <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q2") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
+              What will we see along The Trail?</p>
+
+            {openDropDowns.includes("Q2") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            
+            </div>
+
+            <div style={{marginTop: 24}}>
+            <p onClick={() => handleDrop("Q3")} style={{cursor: "pointer", fontSize: 22}}>
+              
+              <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q3") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
+              What will we eat?</p>
+
+            {openDropDowns.includes("Q3") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            
+            </div>
+
+
+            <div style={{marginTop: 24}}>
+            <p onClick={() => handleDrop("Q4")} style={{cursor: "pointer", fontSize: 22}}>
+              
+              <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q4") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
+              Where will we sleep?</p>
+
+            {openDropDowns.includes("Q4") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            
+            </div>
+
+            <div style={{marginTop: 16}}>
+            <p onClick={() => handleDrop("Q5")} style={{cursor: "pointer", fontSize: 22}}>
+              
+              <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q5") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
+              My parents are concerned, what should I do? </p>
+
+            {openDropDowns.includes("Q5") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            
+            </div>
+
+            <div style={{marginTop: 16}}>
+            <p onClick={() => handleDrop("Q6")} style={{cursor: "pointer", fontSize: 22}}>
+              
+              <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q6") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
+              Will there be travel stipends?</p>
+
+            {openDropDowns.includes("Q6") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            
+            </div>
+
+            <div style={{marginTop: 16}}>
+            <p onClick={() => handleDrop("Q7")} style={{cursor: "pointer", fontSize: 22}}>
+              
+              <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q7") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
+              How can I do this with my club?</p>
+
+            {openDropDowns.includes("Q7") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            
+            </div>
+
+            <div style={{marginTop: 16}}>
+            <p onClick={() => handleDrop("Q8")} style={{cursor: "pointer", fontSize: 22}}>
+              
+              <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q8") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
+              What type of equipment can I make?</p>
+
+            {openDropDowns.includes("Q8") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            
+            </div>
+
+            </div>
+            
+            <img style={{width: "50%", alignSelf: "end", display: "flex"}} src="./YouCanDoIt.svg"/>
+          </div>
+          </Box>
+            <p style={{color: "#FFF5D8", marginBottom: 16}}>built with {'<3'} by real makers figuring out electronics</p>
         </Box>
       </div>
 
         {/* <p>Hello World!</p> */}
         </div>
         <img style={{zIndex: 0, width: "100vw", marginTop: "256px"}} src="./coolBG.svg"/>
+        <div style={{display: "flex", zIndex: 0, height: "100%", marginTop: "-8px", width: "100vw", backgroundColor: "#032412"}}></div>
+
 
       </main>
+      </div>
     </>
   );
 }

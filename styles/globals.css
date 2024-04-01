@@ -74,6 +74,7 @@
 /* Apply the font to elements as needed */
 body {
   font-family: 'Fraunces', sans-serif;
+  background-color: #032412;
 }
 
 .strange {
@@ -84,7 +85,12 @@ body {
   margin: 0;
 }
 
+#placeholder::placeholder {
+  color: "#032412";
+  opacity: 1
+}
 
 p {
   margin: 0;
 }
+
