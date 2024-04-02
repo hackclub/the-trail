@@ -11,6 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [email, setEmail] = useState('');
+  const [hasSentEmail, setHasSentEmail] = useState(false);
+
 
   const handleChangeEmail = (event) => {
     setEmail(event.target.value);
@@ -103,6 +105,7 @@ const createRecord = async (data) => {
         },
       }
     );
+    setHasSentEmail(true)
     console.log('Record created:', response.data);
     return response.data;
   } catch (error) {
@@ -120,14 +123,14 @@ const createRecord = async (data) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{backgroundColor: "#032412", height: "100%"}}>
-      <main style={{backgroundColor: "#FFF5D8", height: "100%", display: "flex"}}>
+      <Box sx={{backgroundColor: "#032412", color: "#032412", height: "100%"}}>
+      <main style={{maxWidth: "100vw", overflow: "hidden", backgroundColor: "#FFF5D8", height: "100%", display: "flex"}}>
         
         
-      <div style={{position: "absolute", zIndex: 5}}>
+      <Box sx={{position: "absolute", zIndex: 5, maxWidth: "100vw", overflow: "hidden"}}>
 
         <img style={{position: "absolute", zIndex: 0, width: "100vw", minHeight: 208, objectFit: "cover"}} src="./TopSky.svg"/>
-        <div style={{height: 116, flexDirection: "column", width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", position: "absolute", top: 96}}>
+        <div id="sample" style={{height: 116, flexDirection: "column", width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", position: "absolute", top: 96}}>
           <div style={{width: "100vw", height: 16, backgroundColor: "#032412"}}></div>
           <div style={{width: "100vw", height: 8, marginTop: 8, backgroundColor: "#032412"}}></div>
           <div style={{width: "100vw", height: 4, marginTop: 4, backgroundColor: "#032412"}}></div>
@@ -135,41 +138,41 @@ const createRecord = async (data) => {
           <div style={{width: "100vw", height: 1, marginTop: 1, backgroundColor: "#032412"}}></div>
 
         </div>
-        <div style={{height: 116, width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", position: "absolute", top: 96}}>
+        <Box sx={{height: 116, width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", position: "absolute", top: 96}}>
           <img style={{height: 116}} src="./Intergalatic.svg"/>
-        </div>
-        <div>
-        <Box sx={{paddingTop: [196, 242, 242], zIndex: 2, position: "relative"}}>
+        </Box>
+        <Box>
+        <Box sx={{paddingTop: [196, 242, 242], maxWidth: "100vw", overflow: "hidden", zIndex: 2, position: "relative"}}>
         <Image sx={{position: "absolute", objectFit: "fit", width: ["0px", "0px", "400px", "450px"], left: "calc(50% - 225px)"}} src="TheTrailType.svg"/>
 
-<div style={{display: "flex", alignItems: "center", width: '100vw', justifyContent:"center"}}>
-        <Grid columns={["1fr", "1fr", "1fr", "1fr 1fr"]} sx={{justifyContent: "space-between", backgroundColor: "#FFF5D8", width: 970, aspectRatio: ['1/2', '1/2', '1/2', '2'], overflow: "hidden", border: '8px solid #032412'}}>
-  <Box sx={{height: "calc(100% - 96px)", margin: 0, boxSizing: 'content-box', display: "flex", padding: [24, 24, 32], flexDirection: "column", justifyContent: "space-between", width: "calc(100% - 64px)"}}>
+<Box sx={{display: "flex", alignItems: "center", width: '100vw', justifyContent:"center"}}>
+        <Grid columns={["1fr", "1fr", "1fr", "1fr 1fr"]} sx={{display: "flex", alignItems: ["center", "center", "auto"], justifyContent: ["center", "space-between", "space-between"], backgroundColor: "#FFF5D8", width: 970, aspectRatio: ['auto', '1/2', '1/2', '2'], overflow: "hidden", border: '8px solid #032412'}}>
+  <Box sx={{height: "calc(100% - 96px)", margin: 0, boxSizing: 'content-box', display: "flex", padding: [24, 24, 32], flexDirection: "column", justifyContent: "space-between", width: ["calc(100% - 64px)"]}}>
     <p style={{fontSize: 16, fontWeight: 300}}>PACIFIC CREST TRAIL, 2024</p>
-    <div>
+    <Box>
     <p style={{fontSize: 24, lineHeight: 2}}>Hey there,</p>
     <p style={{marginTop: 24, fontSize: 24, lineHeight: 1.5}}>
-      You’re invited on a 7 day hike along the Pacific Crest Trail and a 4 week hiking equipment building event with 30 Hack Clubbers  
-    </p>
+    You're invited to an online 4 week hiking equipment hackathon followed by a 7 day irl hike along the Pacific Crest Trail with 30 Hackers!    </p>
 
     <Text sx={{fontSize: [22, 24], lineHeight: [2, 1.5], marginTop:  24}}>
 
     <i style={{fontSize: 42,letterSpacing: "1.5px", lineHeight: 1}} className="strange">Save the date:</i><br/>
     Hack & Hike: July 12 - July 19
     </Text>
-    </div>
-    <div style={{display: "flex"}}>
-    <div style={{marginTop: 16, alignItems: "center", display: "flex", justifyContent: "center"}}>
+    </Box>
+    <Box sx={{display: "flex"}}>
+    <Box sx={{marginTop: 16, alignItems: "center", display: "flex", justifyContent: "center"}}>
     <button onClick={scrollToOnboard} style={{cursor: "pointer", position: "absolute", fontSize: 24, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "2px solid #FFF5D8", outline:"none", color:"#FFF5D8", padding: "16px 24px"}}>Hop Onboard</button>
 
     <button onClick={scrollToOnboard} style={{cursor: "pointer", fontSize: 24, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "4px solid #032412", outline:"none", color:"#FFF5D8", padding: "16px 24px"}}>Hop Onboard</button>
-    </div>
-    </div>
+    </Box>
+    </Box>
   </Box>
-  <div style={{width: "100%", position:"relative", flexDirection: "column", height: "100%", display: "flex", justifyContent: "space-between"}}>
+  <Box sx={{display: ["none", "flex", "flex"], width: "100%", position:"relative", flexDirection: "column", height: "100%", justifyContent: "space-between"}}>
 
   <Draggable>
-  <img style={{position: "absolute", 
+  <Image sx={{position: "absolute", 
+  display: ["none", "flex", "flex"],
   
   
   userDrag: 'none',  // Prevent image dragging
@@ -183,38 +186,39 @@ const createRecord = async (data) => {
 </Draggable>
 
 
-  <img 
+  <Image 
   
   onMouseEnter={handleHover}
   onMouseLeave={handleMouseLeave}
   
-  style={{position: "absolute",
-  
+  sx={{position: "absolute",
+  display: ["none", "flex", "flex"],
   transform: `rotate(${rotation}deg)`,
   width: 86, height: 86, right: 16, zIndex: 2, top:164, cursor: "wait"}} src="beginnersWelcome.svg"/>
 
     <p></p>
-    <div style={{objectFit: "fit", overflow: "hidden", width: "100%", position: "relative"}}>
+    <Box sx={{objectFit: "fit", overflow: "hidden", width: "100%", position: "relative"}}>
 
-    <img style={{objectFit: "fit", overflow: "hidden", width: "100%", userDrag: "none", WebkitUserDrag: "none"}} src="./rightHalf.svg"/>
+    <Image sx={{display: ["none", "flex", "flex"], objectFit: "fit", overflow: "hidden", width: "100%", userDrag: "none", WebkitUserDrag: "none"}} src="./rightHalf.svg"/>
 
-      </div>
+      </Box>
 
-  </div>
+  </Box>
 </Grid>
 
-</div>
+</Box>
         </Box>
-        <Box style={{zIndex: 100, flexDirection: "column", gap: 32, display: 'flex', alignItems: "center",  justifyContent: "center", position: "relative", paddingTop: 32}}>
-          <Box style={{width: 970, backgroundColor: "#FFF5D8", border: "8px solid #032412"}}>
-          <h1 style={{margin: 0, letterSpacing: 1.06, color: "#032412", fontSize: 64, paddingLeft: 32, paddingTop: 32, paddingBottom: 32}}>
+        <Box sx={{zIndex: 100, maxWidth: ["calc(100% - 0px)", "100%", "100%"], flexDirection: "column", gap: 32, display: 'flex', alignItems: "center",  justifyContent: "center", position: "relative", paddingTop: 32}}>
+          <Box sx={{width: ["auto", 970, 970], backgroundColor: "#FFF5D8", border: "8px solid #032412"}}>
+          <Box sx={{padding: [24, 24, 32]}}>
+          <Text style={{margin: 0, fontWeight: "bold", letterSpacing: 1.06, color: "#032412", fontSize: 64}}>
           <i>Pack your bag with PCBs</i>
-            </h1>
+            </Text>
+            </Box>
+          <Box sx={{backgroundColor: "#032412", widht: "100%", height: "4px"}}>
+          </Box>
 
-          <div style={{backgroundColor: "#032412", widht: "100%", height: "4px"}}>
-          </div>
-
-        <div style={{display: "flex", fontSize: 24, lineHeight: 1.5, padding: 32, flexDirection: 'column',}}>
+        <Box sx={{display: "flex", fontSize: 24, lineHeight: 1.5, padding: [24, 24, 32], flexDirection: 'column',}}>
           <p>
           Build a piece of electronic trail equipment (i.e. Flash Lights, Stoves, GPS Compasses, Radios, Head Lamps, Trail Game Consoles, NFC Trail Board Games, Vintage Trail Cameras, etc) with your friends to make this adventure possible.
           </p>
@@ -255,167 +259,167 @@ const createRecord = async (data) => {
 
           <p><b>You ship trail equipment, and we will ship you to the Pacific Crest Trail. The piece of equipment you make will be manufactured to supply our entire group.</b></p>
           
-        </div>
+        </Box>
           </Box>
 
-          <Box style={{width: 970, backgroundColor: "#FFF5D8", border: "8px solid #032412"}}>
-          <h1 style={{margin: 0, width: "100%", textAlign: "center", letterSpacing: 1.06, color: "#032412", fontSize: 64, paddingLeft: 32, paddingTop: 32, paddingBottom: 32}}>
+          <Box sx={{width: ["100%", 970, 970], backgroundColor: "#FFF5D8", border: "8px solid #032412"}}>
+          <h1 style={{margin: 0, textAlign: "center", letterSpacing: 1.06, color: "#032412", fontSize: 64, paddingLeft: 32, paddingTop: 32, paddingBottom: 32, paddingRight: 32}}>
           <i>Our journey...</i>
             </h1>
 
-          <div style={{backgroundColor: "#032412", widht: "100%", height: "4px"}}>
-          </div>
+          <Box sx={{backgroundColor: "#032412", widht: "100%", height: "4px"}}>
+          </Box>
 
-        <div style={{flexDirection: "row", display: "flex", fontSize: 24, lineHeight: 1.5, padding: 0, justifyContent: "space-between"}}>
-          <div style={{width: "100%"}}>
+        <Box sx={{flexDirection: ["column", "row", "row"], display: "flex", fontSize: 24, lineHeight: 1.5, padding: 0, justifyContent: "space-between"}}>
+          <Box sx={{width: "100%"}}>
           
-          <div style={{padding: 24, borderBottom: "4px solid #032412", borderRight: "2px solid #032412"}}>
-          <p style={{fontSize: 32}}>
-          first “four” weeks <i style={{fontSize: 16, marginLeft: 8}}>(Jun 1st - Jul 7th)</i>     
+          <Box sx={{padding: 24, borderBottom: "4px solid #032412", borderRight: "2px solid #032412"}}>
+          <p style={{fontSize: 32, lineHeight: 1}}>
+          first "four" weeks <i style={{fontSize: 16, lineHeight: 0, marginLeft: 8}}><Text sx={{display: ["flex", "none", "none"]}}><br/></Text>(Jun 1st - Jul 7th)</i>     
           </p>
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
-          <div onClick={() => handleDrop("weekZero")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
+          <Box onClick={() => handleDrop("weekZero")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
           <p>0. Come up with an idea</p>
           <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("weekZero") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
-          </div>
+          </Box>
 
           {openDropDowns.includes("weekZero") && (
           
-          <div style={{display: "flex", flexDirection: "column"}}>
+          <Box sx={{display: "flex", flexDirection: "column"}}>
             <p style={{fontSize:20}}>Sign up and then PR your piece of trail equipment idea to our <a style={{color: "#032412"}} href="https://github.com/hackclub/trail">Trail GitHub Repo</a>.</p>
             <img style={{display: "flex", width: "100%"}} src="EquipmentSVG.svg"/>
-          </div>)}
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          </Box>)}
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
-          <div onClick={() => handleDrop("weekOne")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
+          <Box onClick={() => handleDrop("weekOne")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
           <p>1. Parts & Schematic</p>
           <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("weekOne") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
-          </div>
+          </Box>
 
           {openDropDowns.includes("weekOne") && (
           
-          <div style={{display: "flex", flexDirection: "column"}}>
+          <Box sx={{display: "flex", flexDirection: "column"}}>
             <p style={{fontSize:20}}>
 
-            Join daily calls in <a style={{color: "#032412"}} href="https://hackclub.slack.com/archives/C06MPNYL0GH">#the-trail</a> channel (Hack Club Slack) and consult <a href="https://github.com/hackclub/trail/trail-book.md" style={{color: "#032412"}}>The Trail Book</a> to find the parts you need and wire up a schematic
+            Join daily calls in <a style={{color: "#032412"}} href="https://hackclub.slack.com/archives/C06MPNYL0GH">#the-trail</a> channel (Hack Club Slack) and consult <a href="https://github.com/hackclub/trail/trail-book.md" style={{color: "#032412"}}>The Trail Book</a> to find the parts you need and wire up a schematic.
 
             </p>
             <img style={{display: "flex", width: "100%"}} src="scaryConnections.svg"/>
-          </div>)}
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          </Box>)}
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
-          <div onClick={() => handleDrop("weekTwo")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
+          <Box onClick={() => handleDrop("weekTwo")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
           <p>2. Wire Up PCB & Order</p>
           <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("weekTwo") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
-          </div>
+          </Box>
 
           {openDropDowns.includes("weekTwo") && (
           
-          <div style={{display: "flex", flexDirection: "column"}}>
+          <Box sx={{display: "flex", flexDirection: "column"}}>
             <p style={{fontSize:20}}>
 
 
-            Now time to resolve rat nests & order your board. This will be incredibly nerve-racking but you'll get a full design review and be able to confidently order the board and hope it will work. You'll also get the opportunity to add a wild silk screen.
+            Now, time to resolve rat nests & order your board. This will be incredibly nerve-racking but you'll get a full design review and be able to confidently order the board and hope it will work. You'll also get the opportunity to add a wild silk screen.
 
 
             </p>
             <img style={{display: "flex", width: "100%"}} src="maggie.svg"/>
-          </div>)}
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          </Box>)}
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
-          <div onClick={() => handleDrop("weekThree")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
+          <Box onClick={() => handleDrop("weekThree")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
           <p>3. Make A Case</p>
           <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("weekThree") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
-          </div>
+          </Box>
 
           {openDropDowns.includes("weekThree") && (
           
-          <div style={{display: "flex", flexDirection: "column"}}>
+          <Box sx={{display: "flex", flexDirection: "column"}}>
             <p style={{fontSize:20}}>
 
             Now you can be creative and make some sort of case for your circuit to cover up that fiber glass. We recommend 3D printing a case, but you're also welcome to experiment with making a case out of metal or wood.
 
             </p>
             <img style={{display: "flex", width: "100%"}} src="metalGrinder.svg"/>
-          </div>)}
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "0px solid #032412"}}>
+          </Box>)}
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: ["4px solid #032412", "0px solid #032412", "0px solid #032412"]}}>
 
-          <div onClick={() => handleDrop("weekFour")} style={{cursor: "pointer", display: "flex", minHeight: 36, alignItems: 'center', justifyContent: "space-between"}}>
+          <Box onClick={() => handleDrop("weekFour")} style={{cursor: "pointer", display: "flex", minHeight: 36, alignItems: 'center', justifyContent: "space-between"}}>
           <p>4. Assemble</p>
           <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("weekFour") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
-          </div>
+          </Box>
 
           {openDropDowns.includes("weekFour") && (
           
-          <div style={{display: "flex", flexDirection: "column"}}>
+          <Box sx={{display: "flex", flexDirection: "column"}}>
             <p style={{fontSize:20}}>
 
             Boom your pieces start to arrive in the mail and you assemble them.
             </p>
-          </div>)}
-          </div>
+          </Box>)}
+          </Box>
           
-          </div>
-          <div style={{width: "100%"}}>
-          <div style={{padding: 24, borderBottom: "4px solid #032412", borderLeft: "2px solid #032412"}}>
-          <p style={{fontSize: 32}}>
-          week on the trail: <i style={{fontSize: 16, marginLeft: 8}}>(Jul 12 - Jul 19)</i>     
+          </Box>
+          <Box sx={{width: "100%"}}>
+          <Box sx={{padding: 24, borderBottom: "4px solid #032412", borderLeft: "2px solid #032412"}}>
+          <p style={{fontSize: 32, lineHeight: 1}}>
+          week on the trail: <i style={{fontSize: 16, lineHeight: 0, marginLeft: 8}}><Text sx={{display: ["flex", "none", "none"]}}><br/></Text>(Jul 12 - Jul 19)</i>     
           </p>
-          </div>
+          </Box>
 
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
-          <div onClick={() => handleDrop("dayOne")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
+          <Box onClick={() => handleDrop("dayOne")} style={{cursor: "pointer", display: "flex", height: 36, alignItems: 'center', justifyContent: "space-between"}}>
           <p>Day One -</p>
           <img style={{transition: "transform 0.001s linear", transform: `rotate(${openDropDowns.includes("dayOne") ? (180) : (0)}deg)`}}src="TheDrop.svg"/>
-          </div>
+          </Box>
 
           {openDropDowns.includes("dayOne") && (<p>Yo</p>)}
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
           <p>Day Two - </p>
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
           <p>Day Three -</p>
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
           <p>Day Four -</p>
-          </div>
-          <div style={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
+          </Box>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderLeft: "2px solid #032412", borderBottom: "4px solid #032412"}}>
 
           <p>Day Five -</p>
-          </div>
+          </Box>
 
-          <div style={{paddingLeft: 24, paddingRight: 24,  marginLeft: "-2px", paddingTop: 16, paddingBottom: 16, borderLeft: "4px solid #032412", borderBottom: "4px solid #032412"}}>
+          <Box sx={{paddingLeft: 24, paddingRight: 24,  marginLeft: "-2px", paddingTop: 16, paddingBottom: 16, borderLeft: "4px solid #032412", borderBottom: "4px solid #032412"}}>
           <p>Day Six -</p>
-          </div>
+          </Box>
 
-          <div style={{paddingLeft: 24, paddingRight: 24, marginLeft: "-2px", paddingTop: 16, paddingBottom: 16, borderLeft: "4px solid #032412", borderBottom: "0px solid #032412"}}>
+          <Box sx={{paddingLeft: 24, paddingRight: 24, marginLeft: "-2px", paddingTop: 16, paddingBottom: 16, borderLeft: "4px solid #032412", borderBottom: "0px solid #032412"}}>
           <p>Day Seven -</p>
-          </div>
-          </div>
-
-
-        </div>
+          </Box>
           </Box>
 
 
-          <Box className="postcard" ref={sectionRef} style={{width: 970, backgroundColor: "#FFF5D8", padding: 32}}>
-          <h1 style={{margin: 0, letterSpacing: 1.06, color: "#032412", fontSize: 64}}>
+        </Box>
+          </Box>
+
+
+          <Box className="postcard" ref={sectionRef} sx={{width: ["100%", 970, 970], backgroundColor: "#FFF5D8", padding: 32}}>
+          <Text sx={{margin: 0, fontWeight: "bold", letterSpacing: 1.06, color: "#032412", fontSize: [42, 64, 64]}}>
           <i>Join The Expedition!</i>
-          </h1>
+          </Text>
 
           <p style={{fontSize: 24, marginTop: 24,}}>Embark on the greatest adventure of your life, make great friendships, and build a project that you didn’t think was possible.</p>
 
-          <div style={{marginTop: 24}}>
+          <Box sx={{marginTop: 24}}>
             <input 
             value={email}
             onChange={handleChangeEmail}
@@ -427,23 +431,24 @@ const createRecord = async (data) => {
                   
             
             })}
-            style={{cursor: "pointer", fontFamily: "Fraunces", cursor: "pointer", color: "#FFF5D8", fontSize: 22, padding: 8, backgroundColor: "#032412", border: "4px solid #032412"}}>Hop Onboard</button>
+            disabled={hasSentEmail}
+            style={{cursor: "pointer", fontFamily: "Fraunces", cursor: "pointer", color: "#FFF5D8", fontSize: 22, padding: 8, backgroundColor: "#032412", border: "4px solid #032412"}}>{!hasSentEmail ? ("Hop Onboard") : ("Check your inbox")}</button>
             <p style={{fontSize: 24, marginTop: 16}}>
               <b>
       Deadline To Sign Up: {timeLeft.days} days {timeLeft.hours} hours {timeLeft.minutes} minutes {timeLeft.seconds} seconds
    </b> </p>
-          </div>
+          </Box>
           
           </Box>
 
-          <Box style={{width: 970, marginBottom: 24, backgroundColor: "#FFF5D8", border: "8px solid #032412", padding: 32}}>
-          <h1 style={{margin: 0, letterSpacing: 1.06, color: "#032412", fontSize: 64}}>
+          <Box sx={{width: ["100%", 970, 970], marginBottom: 24, backgroundColor: "#FFF5D8", border: "8px solid #032412", padding: 32}}>
+          <Text sx={{fontSize: [42, 64, 64], fontWeight: "bold", marginTop: 0, letterSpacing: 1.06, color: "#032412"}}>
           <i>Now to the questions...</i>
-          </h1>
-          <div style={{display: "flex"}}>
-            <div style={{width: "50%", flexDirection: "column", display:"flex"}}>
+          </Text>
+          <Box sx={{marginTop: 32, display: "flex", flexDirection: ["column", "row", "row"]}}>
+            <Box sx={{width: ["100%", "50%","50%"], flexDirection: "column", display:"flex"}}>
             
-            <div>
+            <Box>
             <p onClick={() => handleDrop("Q1")} style={{cursor: "pointer", fontSize: 22}}>
               
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q1") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
@@ -452,8 +457,8 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q1") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
             
-            </div>
-            <div style={{marginTop: 24}}>
+            </Box>
+            <Box sx={{marginTop: 24}}>
             <p onClick={() => handleDrop("Q2")} style={{cursor: "pointer", fontSize: 22}}>
               
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q2") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
@@ -461,9 +466,9 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q2") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
             
-            </div>
+            </Box>
 
-            <div style={{marginTop: 24}}>
+            <Box sx={{marginTop: 24}}>
             <p onClick={() => handleDrop("Q3")} style={{cursor: "pointer", fontSize: 22}}>
               
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q3") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
@@ -471,10 +476,10 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q3") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
             
-            </div>
+            </Box>
 
 
-            <div style={{marginTop: 24}}>
+            <Box sx={{marginTop: 24}}>
             <p onClick={() => handleDrop("Q4")} style={{cursor: "pointer", fontSize: 22}}>
               
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q4") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
@@ -482,9 +487,9 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q4") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
             
-            </div>
+            </Box>
 
-            <div style={{marginTop: 16}}>
+            <Box sx={{marginTop: 16}}>
             <p onClick={() => handleDrop("Q5")} style={{cursor: "pointer", fontSize: 22}}>
               
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q5") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
@@ -492,9 +497,9 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q5") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
             
-            </div>
+            </Box>
 
-            <div style={{marginTop: 16}}>
+            <Box sx={{marginTop: 16}}>
             <p onClick={() => handleDrop("Q6")} style={{cursor: "pointer", fontSize: 22}}>
               
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q6") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
@@ -502,9 +507,9 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q6") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
             
-            </div>
+            </Box>
 
-            <div style={{marginTop: 16}}>
+            <Box sx={{marginTop: 16}}>
             <p onClick={() => handleDrop("Q7")} style={{cursor: "pointer", fontSize: 22}}>
               
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q7") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
@@ -512,9 +517,9 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q7") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
             
-            </div>
+            </Box>
 
-            <div style={{marginTop: 16}}>
+            <Box sx={{marginTop: 16}}>
             <p onClick={() => handleDrop("Q8")} style={{cursor: "pointer", fontSize: 22}}>
               
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q8") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
@@ -522,25 +527,25 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q8") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
             
-            </div>
+            </Box>
 
-            </div>
+            </Box>
             
-            <img style={{width: "50%", alignSelf: "end", display: "flex"}} src="./YouCanDoIt.svg"/>
-          </div>
+            <Image sx={{width: ["100%", "50%","50%"], alignSelf: "end", display: "flex"}} src="./YouCanDoIt.svg"/>
           </Box>
-            <p style={{color: "#FFF5D8", marginBottom: 16}}>built with {'<3'} by real makers figuring out electronics</p>
+          </Box>
+            <p style={{color: "#FFF5D8", textAlign: "center", marginBottom: 16}}>built with {'<3'} by teen hackers<br/> figuring out electronics</p>
         </Box>
-      </div>
+      </Box>
 
         {/* <p>Hello World!</p> */}
-        </div>
+        </Box>
         <img style={{zIndex: 0, width: "100vw", marginTop: "256px"}} src="./coolBG.svg"/>
-        <div style={{display: "flex", zIndex: 0, height: "100%", marginTop: "-8px", width: "100vw", backgroundColor: "#032412"}}></div>
+        <Box sx={{display: "flex", zIndex: 0, height: "100%", marginTop: "-8px", width: "100vw", backgroundColor: "#032412"}}></Box>
 
 
       </main>
-      </div>
+      </Box>
     </>
   );
 }
