@@ -94,3 +94,9 @@ p {
   margin: 0;
 }
 
+.postcard {
+	padding: 1em;
+	border: 14px solid transparent;
+	border-image: 16 repeating-linear-gradient(45deg, #E73640 0, #E73640 1em, transparent 0, transparent 2em,
+	              #2C9DE8 0, #2C9DE8 3em, transparent 0, transparent 4em);
+}

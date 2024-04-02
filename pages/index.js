@@ -177,9 +177,9 @@ const createRecord = async (data) => {
   MozUserSelect: 'none',
   WebkitUserDrag: 'none',
   WebkitUserSelect: 'none',
-
+  
   cursor:"grab",
-  msUserSelect: 'none', width: 120, height: 120, right: 16, top:16}} src="TakeStamp.svg"/>
+  msUserSelect: 'none', zIndex: 99, width: 120, height: 120, right: 16, top:16}} src="TakeStamp.svg"/>
 </Draggable>
 
 
@@ -196,7 +196,7 @@ const createRecord = async (data) => {
     <p></p>
     <div style={{objectFit: "fit", overflow: "hidden", width: "100%", position: "relative"}}>
 
-    <img style={{objectFit: "fit", overflow: "hidden", width: "100%"}} src="./rightHalf.svg"/>
+    <img style={{objectFit: "fit", overflow: "hidden", width: "100%", userDrag: "none", WebkitUserDrag: "none"}} src="./rightHalf.svg"/>
 
       </div>
 
@@ -408,9 +408,9 @@ const createRecord = async (data) => {
           </Box>
 
 
-          <Box ref={sectionRef} style={{width: 970, backgroundColor: "#FFF5D8", border: "8px solid #032412", padding: 32}}>
+          <Box className="postcard" ref={sectionRef} style={{width: 970, backgroundColor: "#FFF5D8", padding: 32}}>
           <h1 style={{margin: 0, letterSpacing: 1.06, color: "#032412", fontSize: 64}}>
-          <i>Join The Expedition</i>
+          <i>Join The Expedition!</i>
           </h1>
 
           <p style={{fontSize: 24, marginTop: 24,}}>Embark on the greatest adventure of your life, make great friendships, and build a project that you didn’t think was possible.</p>
