@@ -8,8 +8,9 @@ The Trail is a 7 IRL day hike along the Pacific Crest Trail and a 4 week online 
 
 To get on the trail you need to be 
 1. A teenager (18 or under) 
-2. Someone who loves to learn (pcbs are realllyy hard)
+2. Someone who loves to learn (PCBs are realllyy hard)
 3. Hacky!
 
 You also need to build a circuit board (you'll hear these referred to as PCBs or simply "boards").
 
+You probably don't know how to build a circuit board, BUT HEY DON'T WORRY! That's totally okay.
