@@ -14,3 +14,5 @@ To get on the trail you need to be
 You also need to build a circuit board (you'll hear these referred to as PCBs or simply "boards").
 
 You probably don't know how to build a circuit board, BUT HEY DON'T WORRY! That's totally okay.
+
+Right now, all you need to do is come up with an idea for something you'd love to build for The Trail and make a Pull Request to add it to our "equipment" folder.
