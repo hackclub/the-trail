@@ -1,4 +1,5 @@
 # 🥾🏞️ The Trail
+[Trail Postcard](https://cloud-ihlmx01p2-hack-club-bot.vercel.app/0trailpostcard.png)
 
 Every year, Hack Clubbers go on grand adventures. This year, we're embarking on the Pacific Crest Trail equipped with only the trail equipment that we build. This is going to be a community effort and for those that make their equipment, they will be shipped onto the Pacific Crest Trail (through the travel stipends available). 
 
