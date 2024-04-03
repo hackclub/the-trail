@@ -17,3 +17,17 @@ You also need to build a circuit board (you'll hear these referred to as PCBs or
 You probably don't know how to build a circuit board, BUT HEY DON'T WORRY! That's totally okay.
 
 Right now, all you need to do is come up with an idea for something you'd love to build for The Trail and make a Pull Request to add it to our "equipment" folder.
+
+Go in the equipments folder and checkout the example markdown! Copy that format and PR your own piece of equipment. 
+
+Here are some examples: 
+1. Trail GPS-powered Orpheus Compass
+2. Electronic Noisey Barometer
+3. See-in-the-dark electronic AR headset
+4. NFC-based board game
+5. Bird sound system (communicate with birds)
+6. Custom trail-food stove
+7. Vintage camera with filters
+8. Walkie-talkie Radio System
+9. Silk-screen trail map with a "you are here" flashing light
+10. Voice-controlled Headlamp With Personality
