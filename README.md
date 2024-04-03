@@ -4,3 +4,12 @@ Every year, Hack Clubbers go on grand adventures. This year, we're embarking on 
 
 The Trail is a 7 IRL day hike along the Pacific Crest Trail and a 4 week online hiking equipment building event with 30 Hack Clubbers. We'll be building the equipment together on the Hack Club Slack, specifically in #the-trail channel.
 
+## Get On The Trail (& build trail equipment)
+
+To get on the trail you need to be 
+1. A teenager (18 or under) 
+2. Someone who loves to learn (pcbs are realllyy hard)
+3. Hacky!
+
+You also need to build a circuit board (you'll hear these referred to as PCBs or simply "boards").
+
