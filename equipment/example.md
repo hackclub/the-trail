@@ -1,2 +1,1 @@
 # Your Piece Of Equipment
-
