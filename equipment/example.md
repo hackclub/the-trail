@@ -3,7 +3,7 @@
 Your Human Name:
 
 
-Is this your first PCB rodeo? (if yes, don't feel bad. you're all good)
+Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):
 
 
 What you are making:
