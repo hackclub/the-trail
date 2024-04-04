@@ -143,6 +143,9 @@ const createRecord = async (data) => {
           <div style={{width: "100vw", height: 1, marginTop: 1, backgroundColor: "#032412"}}></div>
 
         </div>
+        <a href="https://hackclub.com/" style={{zIndex: 10, position: "absolute", left: 32, height: 116}}><img style={{height: 116}} src="./hackerFlag2.svg"/></a>
+        <a href="https://github.com/hackclub/the-trail" style={{zIndex: 10, position: "absolute", right: 32, top: 32, height: 116}}><Image sx={{display: ["none", "flex", "flex"], height: 64}} src="./GHLogo.svg"/></a>
+
         <Box sx={{height: 116, width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", position: "absolute", top: 96}}>
           <img style={{height: 116}} src="./Intergalatic.svg"/>
         </Box>
@@ -309,7 +312,7 @@ const createRecord = async (data) => {
           <Box sx={{display: "flex", flexDirection: "column"}}>
             <p style={{fontSize:20}}>
 
-            Join daily calls in <a style={{color: "#032412"}} href="https://hackclub.slack.com/archives/C06MPNYL0GH">#the-trail</a> channel (Hack Club Slack) and consult <a href="https://github.com/hackclub/trail/trail-book.md" style={{color: "#032412"}}>The Trail Book</a> to find the parts you need and design a circuit schematic.
+            Join daily calls in <a style={{color: "#032412"}} href="https://hackclub.slack.com/archives/C06MPNYL0GH">#the-trail</a> channel (Hack Club Slack) and consult <a href="https://github.com/hackclub/trail/trail-book.md" style={{color: "#032412"}}>The Trail Guide Book</a> to find the parts you need and design a circuit schematic.
 
             </p>
             <img style={{display: "flex", width: "100%"}} src="scaryConnections.svg"/>
@@ -479,7 +482,16 @@ const createRecord = async (data) => {
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q3") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
               What will we eat?</p>
 
-            {openDropDowns.includes("Q3") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            {openDropDowns.includes("Q3") && <p style={{fontSize: 22, marginTop: 8}}>
+              
+            MREs! Turns out that we're not the first group of people who wanted to go outside and survive!<br/><br/> 
+            
+            <img src="/stoveCooking.svg"/>
+
+            
+            MREs are relatively inexpensive packages of food that can be prepared with just hot water, last for decades (so they never go bad), and are delicious!<br/><br/>Visit <a style={{color: "#032412"}} href="https://backpackerspantry.com/collections/food">Back Packer's Pantry</a> to get some inspo! (dw, we'll provide the food)
+
+              </p>}
             
             </Box>
 
@@ -490,7 +502,11 @@ const createRecord = async (data) => {
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q4") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
               Where will we sleep?</p>
 
-            {openDropDowns.includes("Q4") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            {openDropDowns.includes("Q4") && <p style={{fontSize: 22, marginTop: 8}}>
+              
+            We'll be sleeping in tents! Some may opt to go for a hammock (Thomas being one of those people), but almost everyone will be in a tent. You'll have a warm sleeping bag. We'll split up our team among three camp sites, each with about 10 people in them (two large tents per camp site).
+
+              </p>}
             
             </Box>
 
@@ -500,7 +516,10 @@ const createRecord = async (data) => {
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q5") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
               My parents are concerned, what should I do? </p>
 
-            {openDropDowns.includes("Q5") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            {openDropDowns.includes("Q5") && <p style={{fontSize: 22, marginTop: 8}}>
+            Oh yeah, no worries! We have a <a style={{color: "#032412"}} href="https://github.com/hackclub/the-trail/guide-book/parents.md">Parent's Guide to The Trail</a>. If that doesn't help, please schedule a call with an adult HQ member & your parents (just send an email to trail@hackclub.com & cc your parents).
+
+              </p>}
             
             </Box>
 
@@ -510,7 +529,11 @@ const createRecord = async (data) => {
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q6") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
               Will there be travel stipends?</p>
 
-            {openDropDowns.includes("Q6") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            {openDropDowns.includes("Q6") && <p style={{fontSize: 22, marginTop: 8}}>
+              
+            Yep! There are travel stipends of up to $500 for those in US / Canada who make their trail equipment. We'll be flying into Sacramento. We also have a very limited number of international stipends available that are up to $1,000.
+
+              </p>}
             
             </Box>
 
@@ -520,7 +543,11 @@ const createRecord = async (data) => {
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q7") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
               How can I do this with my club?</p>
 
-            {openDropDowns.includes("Q7") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            {openDropDowns.includes("Q7") && <p style={{fontSize: 22, marginTop: 8}}>
+              
+            That's where <a href="https://github.com/hackclub/trail/trail-book.md" style={{color: "#032412"}}>The Trail Book</a> comes into play. You can continue hosting meetings with your Hack Club into the Summer.<br/><br/> We define a Hack Club as simply a bunch of friends getting together and building projects. It doesn't have to be at your school: it can be at a cafe, library, home, or online!<br/><br/>Just get together and each week follow through the guides in <a href="https://github.com/hackclub/trail/trail-book.md" style={{color: "#032412"}}>The Trail Guide Book</a>.
+
+              </p>}
             
             </Box>
 
@@ -530,7 +557,10 @@ const createRecord = async (data) => {
               <img style={{marginRight: 16, transform: `rotate(${openDropDowns.includes("Q8") ? (180) : (0)}deg)`, height: 16}} src="./TheDropV.svg"/>
               What type of equipment can I make?</p>
 
-            {openDropDowns.includes("Q8") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            {openDropDowns.includes("Q8") && <p style={{fontSize: 22, marginTop: 8}}>
+              
+            You can make whatever type of equipment you'd like. Our ask is that what you build will help our adventure along the trail and is a hardware project made using OnBoard (our PCB Grant).<br/><br/>Here are some ideas: Trail GPS-powered Orpheus Compass, Electronic Noisey Barometer, See-in-the-dark electronic AR headset, NFC-based board game, Bird sound system (communicate with birds), Custom trail-food stove, Vintage camera with filters, Walkie-talkie Radio System, Silk-screen trail map with a "you are here" flashing light, Voice-controlled Headlamp With Personality.
+              </p>}
             
             </Box>
 
