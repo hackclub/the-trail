@@ -335,7 +335,7 @@ const createRecord = async (data) => {
 
 
             </p>
-            <img style={{display: "flex", width: "100%"}} src="maggie.svg"/>
+            <img style={{display: "flex", width: "100%"}} src="Maggie.svg"/>
           </Box>)}
           </Box>
           <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
