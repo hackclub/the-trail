@@ -278,14 +278,24 @@ export default function Home() {
 
   <Box>
   
-      <p style={{marginTop: 110, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>Gather your friends</p>
-      <p style={{marginTop: 5, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(1-4 buddies suggested)</p>
+      <p style={{marginTop: 110, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>
+        <img src="oneDot.svg" style={{height: 24, marginRight: 16}}/>
+        Gather your friends
+      </p>
+      <p style={{marginTop: 5, marginLeft: 40, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(1-4 suggested)</p>
 
-      <p style={{marginTop: 10, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>Make trail equipment</p>
-      <p style={{marginTop: 5, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(4 weeks online PCB hackathon)</p>
+      <p style={{marginTop: 10, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>
+      <img src="twoDot.svg" style={{height: 24, marginRight: 16}}/>
 
-      <p style={{marginTop: 10, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>Take the Trail</p>
-      <p style={{marginTop: 5, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(one week in-person Pacific Crest Trail Hike)</p>
+        Make trail equipment  
+      </p>
+      <p style={{marginTop: 5, marginLeft: 40, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(4 weeks online PCB hackathon)</p>
+
+      <p style={{marginTop: 10, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>
+      <img src="threeDot.svg" style={{height: 24, marginRight: 16}}/>
+
+        Hike on the Trail</p>
+      <p style={{marginTop: 5,  marginLeft: 40, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(one week in-person Pacific Crest Trail)</p>
 
 
     </Box>
