@@ -274,7 +274,7 @@ export default function Home() {
     <Box>
     <p style={{fontSize: 24, lineHeight: 2}}>Hey there,</p>
     <p style={{marginTop: 24, fontSize: 23, lineHeight: 1.5}}>
-    You're invited to an online 4 week hiking equipment hackathon followed by a 7 day IRL hike along the Pacific Crest Trail with 30 Hackers!    </p>
+    You're invited to an online 4 week hiking equipment hackathon followed by a 7 day IRL hike along the Pacific Crest Trail with 30 Hackers!</p>
 
     <Text sx={{fontSize: [22, 24], lineHeight: [2, 1.5], marginTop:  24}}>
 
