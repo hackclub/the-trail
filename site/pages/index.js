@@ -261,8 +261,9 @@ export default function Home() {
                   sx={{
                     position: "absolute",
                     objectFit: "fit",
-                    width: ["0px", "0px", "400px", "450px"],
-                    left: "calc(50% - 225px)",
+                    zIndex: 10,
+                    width: ["0px", "0px", "400px", "550px"],
+                    left: "calc(50% - 420px)",
                   }}
                   src="TheTrailType.svg"
                 />
@@ -270,27 +271,40 @@ export default function Home() {
 <Box sx={{display: "flex", alignItems: "center", width: '100vw', justifyContent:"center"}}>
         <Grid columns={["1fr", "1fr", "1fr", "1fr 1fr"]} sx={{display: "flex", alignItems: ["center", "center", "auto"], justifyContent: ["center", "space-between", "space-between"], backgroundColor: "#FFF5D8", width: 970, aspectRatio: ['auto', "1.5",  "1.5", '2', "2", '2'], overflow: "hidden", border: '8px solid #032412'}}>
   <Box sx={{height: "calc(100% - 96px)", margin: 0, boxSizing: 'content-box', display: "flex", padding: [24, 24, 32], flexDirection: "column", justifyContent: "space-between", width: ["calc(100% - 64px)"]}}>
-    <p style={{fontSize: 16, fontWeight: 300}}>PACIFIC CREST TRAIL, 2024</p>
-    <Box>
-    <p style={{fontSize: 24, lineHeight: 2}}>Hey there,</p>
-    <p style={{marginTop: 24, fontSize: 23, lineHeight: 1.5}}>
-    You're invited to an online 4 week hiking equipment hackathon followed by a 7 day IRL hike along the Pacific Crest Trail with 30 Hackers!</p>
+   
+  <Box sx={{position:"relative",  display: "flex", alignItems: "left", justifyContent: "left"}}>
+      <Image sx={{position: "absolute", top: -48, left: -48, objectFit: "fit", width: ["0px", "0px", "100px", "120px"]}} src="steps.svg"/>
+  </Box>
 
-    <Text sx={{fontSize: [22, 24], lineHeight: [2, 1.5], marginTop:  24}}>
+  <Box>
+  
+      <p style={{marginTop: 110, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>Gather your friends</p>
+      <p style={{marginTop: 5, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(1-4 buddies suggested)</p>
 
-    <i style={{fontSize: 42,letterSpacing: "1.5px", lineHeight: 1}} className="strange">Save the date:</i><br/>
-    Hack & Hike: July 12 - July 19
-    </Text>
+      <p style={{marginTop: 10, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>Make trail equipment</p>
+      <p style={{marginTop: 5, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(4 weeks online PCB hackathon)</p>
+
+      <p style={{marginTop: 10, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>Take the Trail</p>
+      <p style={{marginTop: 5, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(one week in-person Pacific Crest Trail Hike)</p>
+
+
     </Box>
     <Box sx={{display: "flex"}}>
-    <Box sx={{marginTop: 16, alignItems: "center", display: "flex", justifyContent: "center"}}>
-    <button onClick={scrollToOnboard} style={{cursor: "pointer", position: "absolute", fontSize: 24, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "2px solid #FFF5D8", outline:"none", color:"#FFF5D8", padding: "16px 24px"}}>Hop Onboard</button>
+    <Box sx={{marginTop: 32, marginRight:60, alignItems: "center", display: "flex", justifyContent: "center"}}>
+    <button onClick={scrollToOnboard} style={{cursor: "pointer", position: "absolute", fontSize: 20, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "2px solid #FFF5D8", outline:"none", color:"#FFF5D8", padding: "8px 16px"}}>Hop Onboard</button>
 
-    <button onClick={scrollToOnboard} style={{cursor: "pointer", fontSize: 24, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "4px solid #032412", outline:"none", color:"#FFF5D8", padding: "16px 24px"}}>Hop Onboard</button>
+    <button onClick={scrollToOnboard} style={{cursor: "pointer", fontSize: 20, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "4px solid #032412", outline:"none", color:"#FFF5D8", padding: "8px 16px"}}>Hop Onboard</button>
+    
     </Box>
+    <Box sx={{marginTop: 32, marginLeft: 42, alignItems: "center", display: "flex", justifyContent: "center"}}>
+    <button onClick={() => window.open('https://github.com/hackclub/the-trail', '_blank')} style={{cursor: "pointer", position: "absolute", fontSize: 20, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#FFF5D8", border: "4px solid #032412", outline:"none", color:"#032412", padding: "8px 16px"}}>
+    Visit Our Repo
+</button>
+
     </Box>
-  </Box>
-  <Box sx={{display: ["none", "none", "flex"], width: "100%", position:"relative", flexDirection: "column", height: "100%", justifyContent: "space-between"}}>
+
+    </Box> 
+  </Box> <Box sx={{display: ["none", "none", "flex"], width: "100%", position:"relative", flexDirection: "column", height: "100%", justifyContent: "space-between"}}>
 
   <Draggable>
   <Image sx={{position: "absolute", 
