@@ -26,7 +26,7 @@ export default function Home() {
 
 
   const calculateTimeLeft = () => {
-    const deadline = new Date('April 21, 2024 00:00:00').getTime();
+    const deadline = new Date('May 1, 2024 00:00:00').getTime();
     const now = new Date().getTime();
     const difference = deadline - now;
 
@@ -227,12 +227,16 @@ const createRecord = async (data) => {
           </Box>
 
         <Box sx={{display: "flex", fontSize: 24, lineHeight: 1.5, padding: [24, 24, 32], flexDirection: 'column',}}>
-          <p>
-          Build a piece of electronic trail equipment (e.g. Flash Lights, Stoves, GPS Compasses, Radios, Head Lamps, Trail Game Consoles, NFC Trail Board Games, Vintage Trail Cameras, etc) with your friends to make this adventure possible.
-          </p>
+        <p><b>You ship trail equipment, and we will ship you to the Pacific Crest Trail. The piece of equipment you make will be manufactured to supply our entire group.</b></p>
 
-          <p>You can build whatever you’d like, here are some challenges you may solve for:
-            <br/><b>How are we going to...</b>
+        <br/>
+          <p>
+          Build a piece of electronic trail equipment with your friends to make this adventure possible. You can build whatever you’d like, here are some challenges you may solve for:
+          </p>
+          <br/>
+
+          <p>
+            <b>How are we going to...</b>
           </p>
 
           <ul>
@@ -264,11 +268,22 @@ const createRecord = async (data) => {
             Cook our food
             </li>
           </ul>
-
-          <p><b>You ship trail equipment, and we will ship you to the Pacific Crest Trail. The piece of equipment you make will be manufactured to supply our entire group.</b></p>
           
         </Box>
           </Box>
+
+
+          <Box sx={{width: ["auto", 970, 970], backgroundColor: "#FFF5D8", border: "8px solid #032412"}}>
+          <Box sx={{padding: [24, 24, 32], display: "flex"}}>
+          <video style={{display: "flex", width: "100%"}} controls src="/video.mp4"/>
+            </Box>
+          <Box sx={{backgroundColor: "#032412", widht: "100%", height: "4px"}}>
+          </Box>
+
+          </Box>
+
+
+
 
           <Box sx={{width: ["100%", 970, 970], backgroundColor: "#FFF5D8", border: "8px solid #032412"}}>
           <h1 style={{margin: 0, textAlign: "center", letterSpacing: 1.06, color: "#032412", fontSize: 64, paddingLeft: 32, paddingTop: 32, paddingBottom: 32, paddingRight: 32}}>
@@ -283,7 +298,7 @@ const createRecord = async (data) => {
           
           <Box sx={{padding: 24, borderBottom: "4px solid #032412", borderRight: "2px solid #032412"}}>
           <p style={{fontSize: 32, lineHeight: 1}}>
-          first "four" weeks <i style={{fontSize: 16, lineHeight: 0, marginLeft: 8}}><Text sx={{display: ["flex", "none", "none"]}}><br/></Text>(Jun 1st - Jul 7th)</i>     
+          Online four weeks <i style={{fontSize: 16, lineHeight: 0, marginLeft: 8}}><Text sx={{display: ["flex", "none", "none"]}}><br/></Text>(May 1st - Jun 1st)</i>     
           </p>
           </Box>
           <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
@@ -296,8 +311,8 @@ const createRecord = async (data) => {
           {openDropDowns.includes("weekZero") && (
           
           <Box sx={{display: "flex", flexDirection: "column"}}>
-            <p style={{fontSize:20}}>Sign up and then open a PR with your piece of trail equipment idea to our <a style={{color: "#032412"}} href="https://github.com/hackclub/trail">Trail GitHub Repo</a>.</p>
-            <img style={{display: "flex", width: "100%"}} src="EquipmentSVG.svg"/>
+            <p style={{fontSize:20}}>Sign up and then open a PR with your piece of trail equipment idea to our <a style={{color: "#032412"}} href="https://github.com/hackclub/the-trail">Trail GitHub Repo</a>.</p>
+            <img style={{display: "flex", width: "100%"}} src="lamp.svg"/>
           </Box>)}
           </Box>
           <Box sx={{paddingLeft: 24, paddingRight: 24, paddingTop: 16, paddingBottom: 16, borderRight: "2px solid #032412", borderBottom: "4px solid #032412"}}>
@@ -312,7 +327,7 @@ const createRecord = async (data) => {
           <Box sx={{display: "flex", flexDirection: "column"}}>
             <p style={{fontSize:20}}>
 
-            Join daily calls in <a style={{color: "#032412"}} href="https://hackclub.slack.com/archives/C06MPNYL0GH">#the-trail</a> channel (Hack Club Slack) and consult <a href="https://github.com/hackclub/trail/trail-book.md" style={{color: "#032412"}}>The Trail Guide Book</a> to find the parts you need and design a circuit schematic.
+            Join daily calls in <a style={{color: "#032412"}} href="https://hackclub.slack.com/archives/C06MPNYL0GH">#the-trail</a> channel (Hack Club Slack) and consult <a href="https://github.com/hackclub/the-trail/trail-book.md" style={{color: "#032412"}}>The Trail Guide Book</a> to find the parts you need and design a circuit schematic.
 
             </p>
             <img style={{display: "flex", width: "100%"}} src="scaryConnections.svg"/>
@@ -377,7 +392,7 @@ const createRecord = async (data) => {
           <Box sx={{width: "100%"}}>
           <Box sx={{padding: 24, borderBottom: "4px solid #032412", borderLeft: "2px solid #032412"}}>
           <p style={{fontSize: 32, lineHeight: 1}}>
-          week on the trail: <i style={{fontSize: 16, lineHeight: 0, marginLeft: 8}}><Text sx={{display: ["flex", "none", "none"]}}><br/></Text>(Jul 12 - Jul 19)</i>     
+          IRL Trail Week: <i style={{fontSize: 16, lineHeight: 0, marginLeft: 8}}><Text sx={{display: ["flex", "none", "none"]}}><br/></Text>(Jul 12 - Jul 19)</i>     
           </p>
           </Box>
 
@@ -439,11 +454,85 @@ const createRecord = async (data) => {
                   
             
             })}
-            disabled={hasSentEmail}
+            disabled={hasSentEmail || !email.includes("@")}
             sx={{cursor: "pointer", marginTop: ["16px", 0, 0], fontFamily: "Fraunces", cursor: "pointer", borderRadius: 0, color: "#FFF5D8", fontSize: "22px", padding: "8px", backgroundColor: "#032412", border: "4px solid #032412"}}>{!hasSentEmail ? ("Hop Onboard") : ("Check your inbox")}</Button>
             <p style={{fontSize: 24, marginTop: 16}}>
+              
+              Hopping Onboard means you're joining our team! You'll get weekly updates, invites to join our trail calls, and a trail guide to help you get you and your friends to make a cool gadget & join us on the Pacific Crest Trail. <br/> <br/> 
               <b>
-      Deadline To Sign Up: {timeLeft.days} days {timeLeft.hours} hours {timeLeft.minutes} minutes {timeLeft.seconds} seconds
+      Time till the trail begins... <br/> 
+      
+      <div style={{display: "flex", gap: 8, marginTop: 8, alignItems: "center"}}>
+      <Draggable>
+      <div style={{padding: 8,
+                    backgroundColor: "#FFF5D8",
+
+        userDrag: 'none',  // Prevent image dragging
+        userSelect: 'none',
+        MozUserSelect: 'none',
+        WebkitUserDrag: 'none',
+        WebkitUserSelect: 'none',
+        
+        cursor:"grab",
+        msUserSelect: 'none',
+        width: 36, border: "4px solid #032412"}}>
+      {timeLeft.days} <caption style={{fontSize: 12}}>day</caption> 
+      </div>
+      </Draggable>
+      <Draggable>      
+        <div style={{padding: 8, 
+              backgroundColor: "#FFF5D8",
+
+            userDrag: 'none',  // Prevent image dragging
+            userSelect: 'none',
+            MozUserSelect: 'none',
+            WebkitUserDrag: 'none',
+            WebkitUserSelect: 'none',
+            
+            cursor:"grab",
+            msUserSelect: 'none',
+          
+          width: 36, border: "4px solid #032412"}}>
+      {timeLeft.hours} <caption style={{fontSize: 12}}>hr</caption>  
+      </div>
+</Draggable>
+
+      <Draggable>
+      <div style={{padding: 8,
+            backgroundColor: "#FFF5D8",
+
+                    userDrag: 'none',  // Prevent image dragging
+                    userSelect: 'none',
+                    MozUserSelect: 'none',
+                    WebkitUserDrag: 'none',
+                    WebkitUserSelect: 'none',
+                    
+                    cursor:"grab",
+                    msUserSelect: 'none',
+                  
+        
+        width: 36, border: "4px solid #032412"}}>
+      {timeLeft.minutes} <caption style={{fontSize: 12}}>min</caption>  
+      </div>
+      </Draggable>
+
+<Draggable>
+      <div style={{padding: 8,
+      backgroundColor: "#FFF5D8",
+                    userDrag: 'none',  // Prevent image dragging
+                    userSelect: 'none',
+                    MozUserSelect: 'none',
+                    WebkitUserDrag: 'none',
+                    WebkitUserSelect: 'none',
+                    
+                    cursor:"grab",
+                    msUserSelect: 'none',
+                  
+        
+        width: 36, border: "4px solid #032412"}}>      {timeLeft.seconds} <caption style={{fontSize: 12}}>sec</caption>   
+      </div>
+      </Draggable>
+      </div>
    </b> </p>
           </Box>
           
@@ -463,7 +552,9 @@ const createRecord = async (data) => {
               What section of the Pacific Crest Trail are 
   we traveling on?</p>
 
-            {openDropDowns.includes("Q1") && <p style={{fontSize: 22, marginTop: 8}}><b>To Be Determined</b></p>}
+            {openDropDowns.includes("Q1") && <p style={{fontSize: 22, marginTop: 8}}>
+              We'll be traveling from 1185 Mile Marker to 1159 Mile Marker. That's 26 miles over 7 days. We will hike 4 miles per day. We don't expect you to be an experienced hiker, but defintely suggest taking a mini day hike with your friends before you embark on the PCT with us!
+              </p>}
             
             </Box>
             <Box sx={{borderBottom: "4px solid #032412", paddingBottom: 16, marginTop: 24}}>
@@ -559,7 +650,19 @@ const createRecord = async (data) => {
 
             {openDropDowns.includes("Q8") && <p style={{fontSize: 22, marginTop: 8}}>
               
-            You can make whatever type of equipment you'd like. Our ask is that what you build will help our adventure along the trail and is a hardware project made using OnBoard (our PCB Grant).<br/><br/>Here are some ideas: Trail GPS-powered Orpheus Compass, Electronic Noisey Barometer, See-in-the-dark electronic AR headset, NFC-based board game, Bird sound system (communicate with birds), Custom trail-food stove, Vintage camera with filters, Walkie-talkie Radio System, Silk-screen trail map with a "you are here" flashing light, Voice-controlled Headlamp With Personality.
+            You can make whatever type of equipment you'd like. Our ask is that what you build will help our adventure along the trail and is a hardware project made using OnBoard (our PCB Grant).<br/><br/>Here are some ideas: 
+            <ul>
+    <li>Trail GPS-powered Orpheus Compass</li>
+    <li>Electronic Noisey Barometer</li>
+    <li>See-in-the-dark electronic AR headset</li>
+    <li>NFC-based board game</li>
+    <li>Bird sound system (communicate with birds)</li>
+    <li>Custom trail-food stove</li>
+    <li>Vintage camera with filters</li>
+    <li>Walkie-talkie Radio System</li>
+    <li>Silk-screen trail map with a "you are here" flashing light</li>
+    <li>Voice-controlled Headlamp With Personality</li>
+</ul>
               </p>}
             
             </Box>
@@ -569,13 +672,15 @@ const createRecord = async (data) => {
             <Image sx={{width: ["100%", "50%","50%"], alignSelf: "end", display: "flex"}} src="./YouCanDoIt.svg"/>
           </Box>
           </Box>
+          <p style={{color: "#FFF5D8", textAlign: "center", marginBottom: 0}}>this is yours</p>
+
             <p style={{color: "#FFF5D8", textAlign: "center", marginBottom: 16}}>built with {'<3'} by teen hackers<br/> figuring out electronics</p>
         </Box>
       </Box>
 
         {/* <p>Hello World!</p> */}
         </Box>
-        <img style={{zIndex: 0, width: "100vw", marginTop: "256px"}} src="./coolBG.svg"/>
+        <img style={{zIndex: 0, width: "100vw", marginTop: "128px"}} src="./coolBG.svg"/>
         <Box sx={{display: "flex", zIndex: 0, height: "100%", marginTop: "-8px", width: "100vw", backgroundColor: "#032412"}}></Box>
 
 
