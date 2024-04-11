@@ -1,6 +1,6 @@
 # Your Project Name
 
-Your Human Name:
+Team Members (1-4 suggested):
 
 
 Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):
