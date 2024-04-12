@@ -15,4 +15,5 @@ If you have any questions, concerns, or would like to discuss any aspect of The 
 Thank you for trusting us with the privilege of guiding your child along the Pacific Crest Trail. We look forward to sharing stories of unforgettable moments and lifelong friendships when we return them to your care.
 
 Best wishes, 
+
 Sarah and Thomas and everyone at Hack Club HQ
