@@ -657,9 +657,15 @@ export default function Home() {
   overflow: "hidden", 
   width: "100%", 
   aspectRatio: "4/3",
-  filter: "saturation(-100%) brightness(100%) contrast(100%)" // For #032412
 }}>
-  <MapWithNoSSR style={{display: "flex", overflow: "hidden", width: "100%", aspectRatio: "4/3"}}/>
+  <MapWithNoSSR style={
+      {
+          display: "flex",
+          overflow: "hidden",
+          width: "100%",
+          aspectRatio: "4/3",
+      }}/>
+
 </div>
 
                     </Box>
