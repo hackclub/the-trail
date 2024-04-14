@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@maptiler/leaflet-maptilersdk": "^2.0.0",
+    "@maptiler/sdk": "^2.0.1",
     "axios": "^1.6.8",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",
