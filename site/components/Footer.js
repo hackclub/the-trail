@@ -1,7 +1,10 @@
 const Footer = () => {
   return (
     <div>
-      built with ❤️ by real makers figuring out electronics
+
+<p style={{color: "#FFF5D8", textAlign: "center", marginBottom: 0, fontSize: 24}}>this is yours</p>
+
+<p style={{color: "#FFF5D8", textAlign: "center", marginBottom: 16, marginTop: 16, fontSize: 14}}>built with {'<3'} by teen hackers<br/> figuring out electronics</p>
     </div>
   );
 }

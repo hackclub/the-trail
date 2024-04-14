@@ -286,7 +286,7 @@ export default function Home() {
 
 <Box sx={{display: "flex", alignItems: "center", width: '100vw', justifyContent:"center"}}>
         <Grid columns={["1fr", "1fr", "1fr", "1fr 1fr"]} sx={{display: "flex", alignItems: ["center", "center", "auto"], justifyContent: ["center", "space-between", "space-between"], backgroundColor: "#FFF5D8", width: 970, aspectRatio: ['auto', "1.5",  "1.5", '2', "2", '2'], overflow: "hidden", border: '8px solid #032412'}}>
-  <Box sx={{height: "calc(100% - 96px)", margin: 0, boxSizing: 'content-box', display: "flex", padding: [24, 24, 32], flexDirection: "column", justifyContent: "space-between", width: ["calc(100% - 64px)"]}}>
+  <Box sx={{height: "calc(100% - 96px)", margin: 0, boxSizing: 'content-box', display: "flex", padding: ["8px", 24, 32], flexDirection: "column", justifyContent: "space-between", width: ["100%", "calc(100% - 64px)"]}}>
    
   <Box sx={{position:"relative",  display: "flex", alignItems: "left", justifyContent: "left"}}>
       <Image sx={{position: "absolute", top: -48, left: -48, objectFit: "fit", width: ["0px", "0px", "100px", "120px"]}} src="steps.svg"/>
@@ -294,25 +294,32 @@ export default function Home() {
 
   <Box>
   
-      <p style={{marginTop: 110, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>
-        <img src="oneDot.svg" style={{height: 24, marginRight: 16}}/>
+  <Image
+                  sx={{
+                    display: ["auto", "auto", "none"]
+                                    }}
+                  src="TheTrailType.svg"
+                />
+
+      <Text sx={{marginTop: [0, 0, 110], display: "block", fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>
+        <Image src="oneDot.svg" sx={{height: 24, marginRight: 16}}/> 
         Gather your friends
-      </p>
-      <p style={{marginTop: 5, marginLeft: 40, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(1-4 suggested)</p>
+      </Text>
+      <Text sx={{marginTop: 5, marginLeft: [0, 0, 40], fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(1-4 friends suggested)</Text>
 
       <p style={{marginTop: 10, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>
       <img src="twoDot.svg" style={{height: 24, marginRight: 16}}/>
 
         Make trail equipment  
       </p>
-      <p style={{marginTop: 5, marginLeft: 40, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(4 weeks online PCB hackathon)</p>
+      <Text sx={{marginTop: 5, marginLeft: [0, 0, 40], fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(4 weeks online PCB hackathon)</Text>
+
 
       <p style={{marginTop: 10, fontSize: 30, fontFamily: "Fraunces", lineHeight: 1.5}}>
       <img src="threeDot.svg" style={{height: 24, marginRight: 16}}/>
 
         Hike on the Trail</p>
-      <p style={{marginTop: 5,  marginLeft: 40, fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(one week in-person Pacific Crest Trail)</p>
-
+        <Text sx={{marginTop: 5, marginLeft: [0, 0, 40], fontSize: 20, fontFamily: "Fraunces", lineHeight: 0.5}}>(7 days in-person Pacific Crest Trail)</Text>
 
     </Box>
     <Box sx={{display: "flex"}}>
@@ -322,9 +329,9 @@ export default function Home() {
     <button onClick={scrollToOnboard} style={{cursor: "pointer", fontSize: 20, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "4px solid #032412", outline:"none", color:"#FFF5D8", padding: "8px 16px"}}>Hop Onboard</button>
     
     </Box>
-    <Box sx={{marginTop: 32, marginLeft: 42, alignItems: "center", display: "flex", justifyContent: "center"}}>
-    <button onClick={() => window.open('https://github.com/hackclub/the-trail', '_blank')} style={{cursor: "pointer", position: "absolute", fontSize: 20, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#FFF5D8", border: "4px solid #032412", outline:"none", color:"#032412", padding: "8px 16px"}}>
-    Visit Our Repo
+    <Box sx={{marginTop: 32, marginLeft: 32, alignItems: "center", display: "flex", justifyContent: "center"}}>
+    <button onClick={() => window.open('https://forms.hackclub.com/t/14tSCVpGWhus', '_blank')} style={{cursor: "pointer", position: "absolute", fontSize: 20, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#FFF5D8", border: "4px solid #032412", outline:"none", color:"#032412", padding: "8px 16px"}}>
+    Get Stickers
 </button>
 
     </Box>
@@ -407,7 +414,7 @@ export default function Home() {
               >
                 <Box
                   sx={{
-                    width: ["auto", 970, 970],
+                    width: ["auto", "auto", 970],
                     backgroundColor: "#FFF5D8",
                     border: "8px solid #032412",
                   }}
@@ -1122,10 +1129,7 @@ export default function Home() {
                             />
                             We'll be traveling from 1185 Mile Marker to 1159
                             Mile Marker. That's 26 miles over 7 days. We will
-                            hike 4 miles per day. We don't expect you to be an
-                            experienced hiker, but defintely suggest taking a
-                            mini day hike with your friends before you embark on
-                            the PCT with us!
+                            hike 4 miles per day.
                           </p>
                         )}
                       </Box>
