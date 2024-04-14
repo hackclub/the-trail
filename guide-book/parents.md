@@ -6,7 +6,7 @@ We understand that entrusting your child on such an adventure can be both exciti
 
 Hack Club staff will be accompanying the group every step of the way. They have trained in Wilderness First Aid and are equipped to handle any situation that may occur. In the unlikely event of an emergency, our staff are equipped with satellite communication devices to reach out for assistance promptly.
 
-Before leaving, all Clubbers will go thorough orientation sessions to familiarize themselves with the trail, camping procedures, and Leave No Trace principles. We emphasize all of this in the Trail Handbook they will receive which also include our camping itinerary to share with you. 
+Before leaving, all Clubbers will go through orientation sessions to familiarize themselves with the trail, camping procedures, and Leave No Trace principles. We emphasize all of this in the Trail Handbook they will receive which also include our camping itinerary to share with you. 
 
 While the Pacific Crest Trail offers stunning opportunities for exploration, it also serves as a chance to test their inventions on the go-supporting personal growth, perserverance, and the Hacky mindset we so often see in them. We also hope they leave with a deep appreciation for nature's beauty. 
 
