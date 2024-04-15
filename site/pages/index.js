@@ -672,7 +672,7 @@ export default function Home() {
                               </a>{" "}
                               channel (Hack Club Slack) and consult{" "}
                               <a
-                                href="https://github.com/hackclub/the-trail/trail-book.md"
+                                href="https://github.com/hackclub/the-trail/blob/main/guide-book/welcome.md"
                                 style={{ color: "#032412" }}
                               >
                                 The Trail Guide Book
