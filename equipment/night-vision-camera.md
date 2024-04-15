@@ -1,8 +1,7 @@
 # Your Project Name
 
 **Team Members (1-4 suggested):**
-@SerenityUX, @Deetschoe**
-
+@SerenityUX, @Deetschoe
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):**
 This is our first time building a big PCB project (we've built a couple small ones)! It's going to be a wild adventure. We look forward to figuring it out with everyone else on the Slack!
