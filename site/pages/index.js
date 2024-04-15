@@ -7,6 +7,8 @@ import Draggable from "react-draggable";
 import axios from "axios";
 import dynamic from "next/dynamic";
 import Footer from "@/components/Footer";
+import PlausibleProvider from 'next-plausible'
+
 const MapWithNoSSR = dynamic(() => import("../components/Map"), {
   ssr: false,
 });
@@ -141,6 +143,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <PlausibleProvider domain="trail.hackclub.com">
+
       <Box
         sx={{ backgroundColor: "#032412", color: "#032412", height: "100%" }}
       >
@@ -323,7 +327,7 @@ export default function Home() {
 
     </Box>
     <Box sx={{display: "flex"}}>
-    <Box sx={{marginTop: 32, marginRight:60, alignItems: "center", display: "flex", justifyContent: "center"}}>
+    <Box sx={{marginTop: 32, marginRight: [42, 60], alignItems: "center", display: "flex", justifyContent: "center"}}>
     <button onClick={scrollToOnboard} style={{cursor: "pointer", position: "absolute", fontSize: 20, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "2px solid #FFF5D8", outline:"none", color:"#FFF5D8", padding: "8px 16px"}}>Hop Onboard</button>
 
     <button onClick={scrollToOnboard} style={{cursor: "pointer", fontSize: 20, fontFamily: "Fraunces", borderRadius: 0, backgroundColor: "#032412", border: "4px solid #032412", outline:"none", color:"#FFF5D8", padding: "8px 16px"}}>Hop Onboard</button>
@@ -491,12 +495,8 @@ export default function Home() {
                     border: "8px solid #032412",
                   }}
                 >
-                  <Box sx={{ padding: [24, 24, 32], display: "flex" }}>
-                    <video
-                      style={{ display: "flex", width: "100%" }}
-                      controls
-                      src="/video.mp4"
-                    />
+                  <Box sx={{ padding: [24, 24, 32], display: "flex", width: "100%" }}>
+                  <iframe width="100%" style={{aspectRatio: 16/9}} src="https://www.youtube.com/embed/m6Ere5voYKs?si=1KS-v0gnLyfpGCXv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </Box>
                   <Box
                     sx={{
@@ -955,7 +955,7 @@ export default function Home() {
                       cool gadget & join us on the Pacific Crest Trail. <br />{" "}
                       <br />
                       <b>
-                        Time till the trail begins... <br />
+                        Time till the equipment building begins... <br />
                         <div
                           style={{
                             display: "flex",
@@ -1356,10 +1356,10 @@ export default function Home() {
                           <p style={{ fontSize: 22, marginTop: 8 }}>
                             That's where{" "}
                             <a
-                              href="https://github.com/hackclub/trail/trail-book.md"
+                              href="https://github.com/hackclub/the-trail/blob/main/guide-book/welcome.md"
                               style={{ color: "#032412" }}
                             >
-                              The Trail Book
+                              The Trail Guide Book
                             </a>{" "}
                             comes into play. You can continue hosting meetings
                             with your Hack Club into the Summer.
@@ -1373,7 +1373,7 @@ export default function Home() {
                             Just get together and each week follow through the
                             guides in{" "}
                             <a
-                              href="https://github.com/hackclub/trail/trail-book.md"
+                              href="https://github.com/hackclub/the-trail/blob/main/guide-book/welcome.md"
                               style={{ color: "#032412" }}
                             >
                               The Trail Guide Book
@@ -1478,6 +1478,8 @@ export default function Home() {
           ></Box>
         </main>
       </Box>
+      </PlausibleProvider>
+
     </>
   );
 }

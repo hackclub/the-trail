@@ -43,9 +43,9 @@ const Map = () => {
         new maptilersdk.Marker(options).setLngLat([39.3681400190001, -120.367222546].reverse()),
         new maptilersdk.Marker(options).setLngLat([39.3428370730001, -120.344219544].reverse()),*/
         new maptilersdk.Marker(options).setLngLat([39.3399569000001, -120.3351219].reverse())
-            .setPopup(new maptilersdk.Popup().setHTML("<h1>Start!</h1>")),
-        new maptilersdk.Marker(options).setLngLat([39.5058618640001, -120.529315365].reverse())
             .setPopup(new maptilersdk.Popup().setHTML("<h1>End!</h1>")),
+        new maptilersdk.Marker(options).setLngLat([39.5058618640001, -120.529315365].reverse())
+            .setPopup(new maptilersdk.Popup().setHTML("<h1>Start!</h1>")),
         ];
 
     for (let marker of markers.current) {
