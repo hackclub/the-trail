@@ -1,6 +1,6 @@
 # Your Project Name
 
-**Team Members (1-4 suggested):** Me, but possobly others if they are intrested
+**Team Members (1-4 suggested):** @evan-gan, @Cosmin-Mare
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):** This would be my first manufactured PCB, but I am currently almost done with my onboard grant.
 
