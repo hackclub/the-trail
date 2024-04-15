@@ -1,3 +1,15 @@
-# Coming soon! 
+# part 1 – intro
+hi! If you're reading this, you probably want to make something neat for The Trail. that's great! i'm Charlie, ~19, based in Burlington, VT and i'm your GO-TO support for designing your trail board. i've been making PCBs for a while now and i really look forward to working 1-on-1 with you to help you take your idea and turn it into something we can all use along The Trail!
+## PCBs
+so what's a PCB? you might not have heard that acronym before, if so, that's fine! you're joining [today's lucky 10,000](https://xkcd.com/1053)!
 
-Full version will be available when sign-ups close on May 1st
+PCB stands for Printed Circuit Board (you can read a whole bunch of nerdy details [here](https://en.wikipedia.org/wiki/Printed_circuit_board) if you're so inclined), and they're essentially flat things with copper tracks that act as wires between components mounted to them. they're what's inside your laptop, phone, anything with any sort of electronics in it. for a while, designing them required expensive software, sometimes specialized equipment (and expensive time-consuming high-minimum-quantity fabrication runs if you didn't want to use [nasty chemicals](https://www.mgchemicals.com/downloads/msds/01%20English%20Can-USA%20SDS/sds-415-l.pdf) in your basement), but no more! now anyone with access to a computer and some time on their hands (that's me, and soon you too!) can design something and get it fabricated and shipped to their door for less than the cost of a copy of Minecraft.
+so...how?
+## what are we cooking?
+we'll get to the technical nitty-gritty soon enough – right now, let's focus on figuring out what exactly you want to build. i'm not gonna give you a list of trail equipment ideas, there are a bunch that are better than i can come up with scattered throughout the other collateral for this event. instead, we're going to look at what's likely possible for us to build in the time we have with the skills we have.
+
+i'm assuming the vast majority of us are not experienced electrical engineers – if you are, great! you can probably ignore most of this document and build something that'll blow us away and i look forward to seeing it! otherwise, we're probably going to have to set our sights on the coolest thing we can realistically pull off.
+
+the first thing you need is an idea. what would be useful to have on the trail? what would you enjoy building? then, think about what you would need to implement it: do you need data from sensors? which kinds? what sort of output do you want? there's the kind of electrical engineering where you draw on a bunch of experience and do a bunch of fancy math, and then there's the kind where you throw parts together like lego bricks – we're going more for the latter, given that we have a month. do some research on what parts are out there! if you want to build a compass, figure out what kind of sensor you could use to measure magnetic fields, and so on and so forth. if you have a neat idea that you aren't sure is possible, post it in the Slack! i'd love to hear what y'all are thinking about making, and i'd be happy to help you figure out what, if, and how.
+
+coming next: how do we pick parts? how do we connect them? all in good time...
