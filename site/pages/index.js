@@ -496,7 +496,7 @@ export default function Home() {
                   }}
                 >
                   <Box sx={{ padding: [24, 24, 32], display: "flex", width: "100%" }}>
-                  <iframe width="100%" style={{aspectRatio: 16/9}} src="https://www.youtube.com/embed/m6Ere5voYKs?si=1KS-v0gnLyfpGCXv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe width="100%" style={{aspectRatio: 16/9}} src="https://www.youtube.com/embed/9_WxKrNbnVM?si=F5QepWdeEuOwOafU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                   </Box>
                   <Box
                     sx={{
@@ -1321,9 +1321,8 @@ export default function Home() {
                           <p style={{ fontSize: 22, marginTop: 8 }}>
                             Yep! There are travel stipends of up to $500 for
                             those in US / Canada who make their trail equipment.
-                            We'll be flying into Sacramento. We also have a very
-                            limited number of international stipends available
-                            that are up to $1,000.
+                            We'll be flying into Sacramento/Reno. We also have a very
+                            limited number of international stipends available.
                           </p>
                         )}
                       </Box>
