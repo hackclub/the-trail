@@ -1,4 +1,4 @@
-# Your Project Name
+# Night Vision Camera
 
 **Team Members (1-4 suggested):**
 @SerenityUX, @Deetschoe**
