@@ -12,4 +12,4 @@ Portable emergency device with switch for strobe light, audible alarm, and tripw
 [Link](https://www.bhphotovideo.com/c/product/920586-REG/brite_strike_capss_camp_alert_security_survivor.html/overview?ap=y&smp=y)
 
 **Sketches (if they exist) (paper works):**
-![The Trail_ Emergency Alarm 1](https://github.com/thekyleliao/the-trail/assets/99450559/b7fda86a-6c1b-4c33-a9f8-245348a5e2b7)
+![The Trail_ Emergency Alarm 1 (1)](https://github.com/thekyleliao/the-trail/assets/99450559/0e66e651-54ab-4359-a43a-358b1b385b7f)
