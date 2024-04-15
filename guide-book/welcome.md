@@ -1,3 +1,3 @@
-# Welcome On The Trail
+# Coming soon! 
 
-This is your guide book!
+Full version will be available when sign-ups close on May 1st
