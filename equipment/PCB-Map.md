@@ -4,7 +4,7 @@ PCB Map
 
 **Team Members (1-4 suggested):**
 
-Bright Li, Jackie Liu, George Weichel, one other
+Bright Li, Jackie Li, George Weichel, Harry 
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):**
 
