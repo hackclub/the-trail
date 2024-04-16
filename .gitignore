@@ -37,3 +37,5 @@ site/*.pem
 
 # Ignore Next.js configuration file
 /site/next.config.js
+
+.DS_Store
