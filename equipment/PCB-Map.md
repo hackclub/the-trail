@@ -1,6 +1,6 @@
-# Your Project Name
+# PCB Map
 
-PCB Map
+
 
 **Team Members (1-4 suggested):**
 
