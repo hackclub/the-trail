@@ -35,6 +35,8 @@ const SpinningBeginnerSign = () => {
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}
       onAnimationEnd={handleAnimationEnd}
+      onTouchStart={handleHover}
+      onTouchEnd={handleMouseLeave}
     >
       <img 
         style={{
