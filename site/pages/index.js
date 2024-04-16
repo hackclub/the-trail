@@ -265,7 +265,7 @@ export default function Home() {
                 top: 96,
               }}
             >
-              <img style={{ height: 116 }} src="./Intergalatic.svg" />
+              <img style={{ height: 116 }} src="./Galactic.png" />
             </Box>
             <Box>
               <Box
