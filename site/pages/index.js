@@ -95,6 +95,8 @@ export default function Home() {
   const TABLE_NAME = "Trail";
 
   const createRecord = async (data) => {
+    setHasSentEmail(true);
+
     try {
       const response = await axios.post(
         `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`,
@@ -106,10 +108,11 @@ export default function Home() {
           },
         }
       );
-      setHasSentEmail(true);
       console.log("Record created:", response.data);
       return response.data;
     } catch (error) {
+      setHasSentEmail(false);
+
       console.error("Error creating record:", error);
       throw error;
     }
