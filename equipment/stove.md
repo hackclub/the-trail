@@ -13,4 +13,4 @@ A PCB stove.
 I don't remember where, I think from a page/the trailer of The Trail
 
 **Sketches (if they exist) (paper works):**
-(don't exist)
+![sketch](https://github.com/AverseABFun/the-trail/assets/81586710/a554253b-d715-4013-9189-508a6928250b)
