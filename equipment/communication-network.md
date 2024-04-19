@@ -1,4 +1,4 @@
-# Your Project Name
+# Communication Network 
 
 **Team Members (1-4 suggested):** @evan-gan, @Cosmin-Mare
 
