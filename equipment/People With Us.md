@@ -1,6 +1,6 @@
 # People With Us
 
-**Team Members (1-4 suggested):** @RECAPXD
+**Team Members (1-4 suggested):** @RECAPXD @ktshacx @DevSrijit @JeffrinJamesCODY @Shrey-Mehra
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):** I have made an NFC card before with the help of a tutorial, but yeah its my first PCB  
 
