@@ -8,5 +8,7 @@
 
 **Inspiration:** Got the inspiration from my brain lol
 
-**Sketches (if they exist) (paper works):** ![image](https://github.com/Swamstick911/the-trail/assets/163744064/38b2ed2d-1e3c-4493-aff9-31f9fee76a28)
+**Sketches (if they exist) (paper works):** ![image](https://github.com/Swamstick911/the-trail/assets/163744064/d02e74d8-ce92-4501-94e7-e33c0b045f9a) ![image](https://github.com/Swamstick911/the-trail/assets/163744064/1dd2eafd-6398-4269-87a6-d2a671ff52e7)
+
+
 
