@@ -1,4 +1,4 @@
-**Team Members (1-4 suggested): Me, at this point**
+**Team Members (1-4 suggested): Only me, @otus9051, at this point**
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good): Yep**
 
