@@ -1,4 +1,4 @@
-# People With Us
+# PNTF (People and Things Finder)
 
 **Team Members (1-4 suggested):** @RECAPXD @ktshacx @DevSrijit @JeffrinJamesCODY @Shrey-Mehra
 
@@ -8,7 +8,9 @@
 
 **Inspiration:** Got the inspiration from my brain lol
 
-**Sketches (if they exist) (paper works):** ![image](https://github.com/Swamstick911/the-trail/assets/163744064/d02e74d8-ce92-4501-94e7-e33c0b045f9a) ![image](https://github.com/Swamstick911/the-trail/assets/163744064/1dd2eafd-6398-4269-87a6-d2a671ff52e7)
+**Sketches (if they exist) (paper works):** ![image](https://github.com/Swamstick911/the-trail/assets/163744064/d02e74d8-ce92-4501-94e7-e33c0b045f9a) 
+![image](https://github.com/Swamstick911/the-trail/assets/163744064/f15c66e3-d3da-441b-9eaa-fcb188cccc7b)
+
 
 
 
