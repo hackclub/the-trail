@@ -1,4 +1,4 @@
-# Incremental Podometer ©
+# Incremental Pedometer ©
 
 ### Team number : 
 We are two : me (@spectralo) and mathR (@theMathR)
@@ -7,7 +7,7 @@ We are two : me (@spectralo) and mathR (@theMathR)
 Yes, i already tried to make a PCB but never finished it and MathR too.
 
 ### What you are making? :
-It's a podometer, with a game on it. (More precisly an incremental game)
+It's a pedometer, with a game on it. (More precisly an incremental game)
 With the 1,8 inch screen (Same as the sprig) and 4 buttons you naviguate in the minigame
 The goal is to earn the maximum of point. At each step you will earn a certain amount of points and you can buy upgrades to earn even more points !!!
 We also plan to add some "social" features over bluetooh of the esp32
