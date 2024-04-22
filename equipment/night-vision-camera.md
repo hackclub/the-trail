@@ -12,7 +12,7 @@ Have you ever been hiking? Dieter & I have hiked many times. When it gets dark, 
 We're making a night-vision camera! You'll be able to take photos and put them on an SD Card.
 
 **Inspiration:**
-We recently made a VR Game where the user can take photos of Capybaras and have those photos sent to their phone. I found the interaction between tapping a button and having that button magically float over to a phone to be super magical. 
+We recently made a VR Game where the user can take photos of Capybaras and have those photos sent to their phone. I found the interaction between tapping a button and having that photo magically float over to a phone to be super magical. 
 
 Dieter is also a bit of a photographer / videographer of sorts, so why not create a project that can allow us to take a new type of photo! (night-vision photos)
 
