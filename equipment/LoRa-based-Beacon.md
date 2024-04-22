@@ -1,6 +1,6 @@
 # LoRa based Beacon with Temp sensors and GPS
 
-<b>Team Members (1-4 suggested):</b> @Always Busy @Shrey Mehra @toxic popcorn @Jeff
+<b>Team Members (1-4 suggested):</b> @RECAPXD @Swamstick911 @DevSrijit @JeffrinJamesCODY @Shrey-Mehra
 
 <b>Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):</b> Created some small ones, but never like this
 
