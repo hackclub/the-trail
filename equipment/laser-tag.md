@@ -7,7 +7,7 @@
 
 ## Experience
 - Have you participated in a PCB rodeo before?
-  - No, we have experience with other hardware engineering projects, like [Winter Hardware](https://github.com/hackclub/winter/blob/main/DevIos01%26Kiana.md) , and I also contributed to [Production](https://arkade.games/).
+  - Yes, we have experience with other hardware engineering projects, like [Winter Hardware](https://github.com/hackclub/winter/blob/main/DevIos01%26Kiana.md) , and I also contributed to [Production](https://arkade.games/).
 
 ## Project Overview
 The Trail Laser Tag Project is designed for outdoor activities with components including a laser gun and a vest for tracking hits. Here's a breakdown of the main elements:
