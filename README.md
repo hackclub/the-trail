@@ -43,7 +43,7 @@ Here are some examples:
    
 ![Add File](https://raw.githubusercontent.com/hackclub/OnBoard/main/docs/images/directions/add-file.png)
 
-4. Enter then name of your file to be the name of your project
+4. Enter then name of your file to be the name of your project(also add the `.md` file extension to the file name)
 5. Use example.md to format your submission
 6. Submit your piece of trail equipment by opening a PR
    
