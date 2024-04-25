@@ -13,6 +13,7 @@ A mobile power station.
 - DC jack with regulated voltage for more unusual or custom devices, e.g. a "pencil" soldering iron for in-situ repairs
 - Our custom 200 V DC socket to power equipment such as camping LED lights
 - 12,8 V • 30 Ah = 384 Wh of energy, more than enough for 7 days of phone charging for 3-5 people
+- Tracks energy usage over time and displays in a mobile app
 
 ### Inspiration
 Bigger power stations like Ecoflow, but in a form factor that can fit inside a backpack.
