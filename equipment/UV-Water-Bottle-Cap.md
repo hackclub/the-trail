@@ -1,7 +1,7 @@
 # UV Water Bottle Cap
 
 **Team Members (1-4 suggested):**  
-John Tan-Aristy, Alex Nguyen, Dominic Druke Jr.
+John Tan-Aristy, Alex Nguyen, Dominic Druke Jr.  
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):**  
 Yes  
 **What you are making?**  
