@@ -481,7 +481,7 @@ export default function Home() {
                       <li>Communicate long distances</li>
                       <li>Navigate the trail</li>
                       <li>Plan according to the weather</li>
-                      <li>Save orpheus</li>
+                      <li>Save Orpheus</li>
                       <li>See in the dark</li>
                       <li>Entertain each other on the trail</li>
                       <li>Communicate with birds</li>
