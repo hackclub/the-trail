@@ -1,7 +1,7 @@
 # Mobile Power Station
 
 ### Team Members (1-4 suggested)
-2
+4 - @pkb-pmj, @darth_taco_tmp, @Adimac93, @HubertK05 - from our school HackClub
 
 ### Is this your first PCB rodeo?
 No. We mostly work with prototyping boards, but we've also designed a few PCBs and @darth-taco-tmp has hand-soldered *a lot* of prototyping boards and probably disassembled many PCBs, if that counts too lol
