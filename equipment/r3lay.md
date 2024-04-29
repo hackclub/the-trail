@@ -7,7 +7,7 @@
 No, I've done other PCB designs before.
 
 **What you are making?**
-I'm creating a radio relay tower that runs on 915 MHz and uses my own communications protocol. It will act as a communications point where all LoRa devices on the Trail can send and receive data.
+I'm creating a radio relay tower that runs on 915 MHz and uses my own communications protocol. It will act as a communications point where all LoRa devices on the Trail can send and receive data. I'm using a custom radio protocol (I will release implementation instructions and probably an Arduino library) as well.
 
 **Inspiration:**
 I was inspired by the design and rapid deployment capability Anduril's Sentry tower.
@@ -15,7 +15,8 @@ I was inspired by the design and rapid deployment capability Anduril's Sentry to
 <img src="https://awdev.codes/tower.png" alt="Anduril's Sentry tower." width="300px">
 
 **Sketches (if they exist) (paper works):**<br>
-<img src="https://awdev.codes/trail-r3lay-design-1.png" alt="Anduril's Sentry tower." width="300px">
+Please refer to the Google Doc below for up-to-date sketches and other information.
 
 **Extra:**
 [Google Doc](https://docs.google.com/document/d/16l_-EpRB6SRwwWAv7UWhFTdDw4K-MfWc5R9WVGZRzxU/)
+[Google Sheet](https://docs.google.com/spreadsheets/d/1felP8TacBeATFT8NmPkRS-dTG1SigL1z-lPHb7KFYmY/)
