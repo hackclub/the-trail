@@ -1,7 +1,7 @@
 STAYAW
 
 Team Members (1-4 suggested):
-  ME + 2 CLUBMEMBERS
+  ME + 2 CLUBMEMBERS (@aminezan)
 
 Is this your first PCB:
   yES, and I have a good feeling about it we can make anything happend
