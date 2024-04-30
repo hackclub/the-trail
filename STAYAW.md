@@ -9,7 +9,7 @@ Is this your first PCB:
 What you are making?
   we will be making a device which can help us:
     -keep dangerous animals away by making a sort of noise which keeps them away (lets take the example of a bear if u see a bear coming towards you u can play a sound which keeps him        away from you.
-    -attract friendlnimals to pet them / have nice pictures
+    -attract friendly animals to pet them by playing stimulating sounds / have nice pictures
   we will be making the PCB consiste of a micro-controller so it can read voices from a usb and then run the audio on the speaker:
     1st week: learn About PCB's and design our own
     2nd week: buy the extra parts such as batteries and other stuff before the PCB is shipped
