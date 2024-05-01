@@ -1,6 +1,7 @@
 # **The \*Spoon\***
 
 **Team Members (1-4 suggested):**
+
 Slack Users: @Egg Socks, @Abhiram Singampalli, @Arun Muthukkumar, magicarp (not signed up yet), & @vracto
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):**
@@ -16,4 +17,6 @@ Instruction on how to cook from Backpacker's Pantry
 
 **Sketches (if they exist) (paper works):**
 
-![sketch](https://cloud-8lt1ycvzx-hack-club-bot.vercel.app/0easyeda_designer.gif)
+![design](https://github.com/vracton/the-trail-spoon/blob/main/assets/image_2024-04-30_222306039.png?raw=true)
+![inaction](https://github.com/vracton/the-trail-spoon/blob/main/assets/image_2024-04-30_222316025.png?raw=true)
+![requirements](https://github.com/vracton/the-trail-spoon/blob/main/assets/image_2024-04-30_222324285.png?raw=true)
