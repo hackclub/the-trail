@@ -2,7 +2,7 @@
 
 **Team Members (1-4 suggested):**
 
-Slack Users: @Egg Socks, @Abhiram Singampalli, @Arun Muthukkumar, magicarp (not signed up yet), & @vracto
+Slack Users: @Maks, @Abhiram Singampalli, @Arun Muthukkumar, magicarp (not signed up yet), & @vracto
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):**
 Yes!
