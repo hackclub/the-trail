@@ -1,4 +1,4 @@
-# MUSICA (Magestic Ukulele, Supplier of Immaculate Chords and Audio)
+# MUSICA (Majestic Ukulele, Supplier of Immaculate Chords and Audio)
 
 **Team Members (1-4 suggested):**
 
