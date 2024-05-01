@@ -8,7 +8,7 @@ Yes!
 
 **What you are making?**
 
-We're making a spoon that can be used to autonomously cook our food. We'll utilize a spoon that can be clipped onto the bag. The spoon will be made of the two parts; the top will house our pcb and clip, while the bottom will be attached with a motor and will spin to stir the food. There'll be a timer that indicates how much time is left in the cooking process as well as when the spoon is stirring. At the end, the spoon will beep to let the user know that their food is done. 
+We're making a spoon that can be used to autonomously cook our food. We'll utilize a spoon that can be clipped onto the MRE bag. The spoon will be made of the two parts; the top will house our pcb and clip, while the bottom will be attached with a motor and will spin to stir the food. There'll be a timer that indicates how much time is left in the cooking process as well as when the spoon is stirring. At the end, the spoon will beep to let the user know that their food is done. 
 
 **Inspiration:**
 
