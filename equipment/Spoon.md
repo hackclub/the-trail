@@ -15,3 +15,5 @@ We're making a spoon that can be used to autonomously cook our food. We'll utili
 Instruction on how to cook from Backpacker's Pantry
 
 **Sketches (if they exist) (paper works):**
+
+![sketch](https://cloud-8lt1ycvzx-hack-club-bot.vercel.app/0easyeda_designer.gif)
