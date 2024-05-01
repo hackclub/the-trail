@@ -1,4 +1,4 @@
-# **The \*Spoon\***
+# **Auto Stirrer 6000***
 
 **Team Members (1-4 suggested):**
 
