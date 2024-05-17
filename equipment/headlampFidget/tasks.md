@@ -1,0 +1,2 @@
+- talk to other team who is creating hand crank generator
+- plan PCB
