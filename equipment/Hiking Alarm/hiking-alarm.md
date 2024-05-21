@@ -1,6 +1,6 @@
 # Emergency Hiking Alarm
 
-**Team Members (1-4 suggested):** @KyleLiao @stati30421 @Johnny Shen
+**Team Members (1-4 suggested):** @KyleLiao @stati30421 @Kevin Yang
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):**
 First time designing and fabricating a PCB without a handy tutorial. Will need some help in figuring out software features along with decipher some of the schematics and part options.
