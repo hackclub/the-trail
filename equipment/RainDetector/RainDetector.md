@@ -1,9 +1,11 @@
 # Rain Detector
 
 **Team Members (1-4 suggested):**
+
 Ishaan (me) & Aryan (brother)
 
 **Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):**
+
 Yes
 
 **What you are making?**
