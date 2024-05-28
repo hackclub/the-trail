@@ -4,6 +4,7 @@ Sasha Przybylski (Schematics + Build)
 Kai Goodall (CAD Enclosure)
 Vinaya Sharma (Schematics + Build)
 Isabela Ferrer (Schematics + Build)
+Abdur Sajid (Build)
 
 Is this your first PCB rodeo? (if yes, don't feel bad. you're all good):
 Yes
@@ -15,4 +16,4 @@ Inspiration:
 🤫
 
 Sketches (if they exist) (paper works):
-<img width="701" alt="Screen Shot 2024-05-14 at 8 32 36 PM" src="https://github.com/hackclub/the-trail/assets/113358364/2f8a4f68-fda2-43bb-a89b-d0de3a886544">
+<img width="705" alt="Screen Shot 2024-05-18 at 10 20 17 PM" src="https://github.com/KaranUCC/the-trail/assets/113358364/4fa9b4db-2395-4f27-88f2-e9f4b5ced477">
